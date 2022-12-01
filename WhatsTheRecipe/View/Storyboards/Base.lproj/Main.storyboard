@@ -30,17 +30,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USW-Zf-bp0" userLabel="CustomNavigation">
                                 <rect key="frame" x="0.0" y="59" width="393" height="73"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Morning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGH-V0-Sa7">
-                                        <rect key="frame" x="26" y="0.0" width="180" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="gDE-Vh-eYU"/>
-                                            <constraint firstAttribute="height" constant="20" id="tfy-NB-VUh"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good Morning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGH-V0-Sa7">
+                                        <rect key="frame" x="26" y="0.0" width="282" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x2Y-U5-xyW">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailFoodImage" translatesAutoresizingMaskIntoConstraints="NO" id="x2Y-U5-xyW">
                                         <rect key="frame" x="316" y="0.0" width="51" height="51"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="51" id="sJZ-nC-oFp"/>
@@ -52,8 +49,9 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="David Kowalski" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2k-9k-60r">
-                                        <rect key="frame" x="26" y="26" width="168.33333333333334" height="28.666666666666671"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="David Kowalski" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2k-9k-60r">
+                                        <rect key="frame" x="26" y="26" width="268" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -62,14 +60,8 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="x2Y-U5-xyW" secondAttribute="trailing" constant="26" id="6ly-TW-llm"/>
-                                    <constraint firstItem="x2Y-U5-xyW" firstAttribute="leading" secondItem="P2k-9k-60r" secondAttribute="trailing" constant="121.66666666666666" id="NG3-jD-a45"/>
-                                    <constraint firstItem="x2Y-U5-xyW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oGH-V0-Sa7" secondAttribute="trailing" constant="8" symbolic="YES" id="OAk-2A-rmb"/>
-                                    <constraint firstItem="P2k-9k-60r" firstAttribute="top" secondItem="oGH-V0-Sa7" secondAttribute="bottom" constant="6" id="ZQL-Tb-KNN"/>
-                                    <constraint firstItem="oGH-V0-Sa7" firstAttribute="leading" secondItem="USW-Zf-bp0" secondAttribute="leading" constant="26" id="hxN-0I-Ked"/>
                                     <constraint firstItem="x2Y-U5-xyW" firstAttribute="top" secondItem="USW-Zf-bp0" secondAttribute="top" id="lhk-RD-DuO"/>
-                                    <constraint firstItem="P2k-9k-60r" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="USW-Zf-bp0" secondAttribute="leading" constant="20" symbolic="YES" id="oQq-bI-LTZ"/>
                                     <constraint firstAttribute="height" constant="73" id="wPo-xX-poL"/>
-                                    <constraint firstItem="oGH-V0-Sa7" firstAttribute="top" secondItem="USW-Zf-bp0" secondAttribute="top" id="yPa-5F-qvP"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -95,6 +87,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="detailFoodImage" width="375" height="433"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
