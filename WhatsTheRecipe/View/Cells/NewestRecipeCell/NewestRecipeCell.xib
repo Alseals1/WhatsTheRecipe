@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spicy Chicken Caremel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XL7-5u-et4">
-                                <rect key="frame" x="93" y="34" width="222" height="20"/>
+                                <rect key="frame" x="93" y="34" width="222" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,7 +55,6 @@
                         <color key="backgroundColor" name="backgroundLT"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="znx-7I-fJZ" secondAttribute="trailing" constant="8" id="111-uz-nSc"/>
-                            <constraint firstItem="FWJ-ES-SXv" firstAttribute="top" secondItem="XL7-5u-et4" secondAttribute="bottom" constant="16" id="4v7-ja-A0S"/>
                             <constraint firstItem="znx-7I-fJZ" firstAttribute="top" secondItem="3zG-7y-tQl" secondAttribute="top" constant="16" id="as6-rh-M2c"/>
                             <constraint firstItem="znx-7I-fJZ" firstAttribute="leading" secondItem="LUj-0N-kH3" secondAttribute="trailing" constant="14" id="bUZ-3l-ObC"/>
                             <constraint firstAttribute="trailing" secondItem="FWJ-ES-SXv" secondAttribute="trailing" constant="8" id="c2h-4X-5Gc"/>
