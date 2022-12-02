@@ -18,6 +18,8 @@ class ViewController: UIViewController {
             switch sectionKind {
                 case .categories:
                     return LayoutSectionFactory().categoryLayout()
+                case .promotion:
+                    return LayoutSectionFactory().promotionLayout()
                 default: return nil
             }
         }
@@ -38,7 +40,8 @@ class ViewController: UIViewController {
 
     func dummyData() {
         let section = [
-            Section(kind: .categories, item: [Food(),Food(),Food(),Food(),Food(),Food(),Food(),Food()])
+            Section(kind: .categories, item: [Food(),Food(),Food(),Food(),Food(),Food(),Food(),Food()]),
+            Section(kind: .promotion, item: [Food()])
         ]
         snapshot = NSDiffableDataSourceSnapshot<Section, Food>()
         snapshot.appendSections(section)
@@ -48,15 +51,9 @@ class ViewController: UIViewController {
     
     func registerCell() {
         collectionView.register(CategoriesCell.nib, forCellWithReuseIdentifier: CategoriesCell.reuseIdentifier)
+        collectionView.register(PromotionCell.nib, forCellWithReuseIdentifier: PromotionCell.reuseIdentifier)
         
         collectionView.collectionViewLayout = collectionViewLayout
-        
-        /*
-//        let cells:[RegisterableView] = [
-//            .nib(CategoriesCell.self)
-//        ]
-//        collectionView.register(cells: cells)
-         */
     }
     
     func setupDataSource() {
@@ -69,6 +66,9 @@ class ViewController: UIViewController {
             switch sectionKind {
                 case .categories:
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCell.reuseIdentifier, for: indexPath)
+                    return cell
+                case .promotion:
+                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PromotionCell.reuseIdentifier, for: indexPath)
                     return cell
                     
                 default: return nil
