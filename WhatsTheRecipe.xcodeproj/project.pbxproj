@@ -20,8 +20,6 @@
 		C640CBC12939112B00F3825C /* LayoutFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C640CBC02939112A00F3825C /* LayoutFactory.swift */; };
 		C640CBC52939135100F3825C /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C640CBC32939135100F3825C /* CategoriesCell.swift */; };
 		C640CBC62939135100F3825C /* CategoriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C640CBC42939135100F3825C /* CategoriesCell.xib */; };
-		C640CBC82939190200F3825C /* RegisterableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C640CBC72939190200F3825C /* RegisterableView.swift */; };
-		C640CBCA29391A8B00F3825C /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C640CBC929391A8B00F3825C /* UICollectionView+Extension.swift */; };
 		C640CBD0293A475A00F3825C /* PromotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C640CBCE293A475A00F3825C /* PromotionCell.swift */; };
 		C640CBD1293A475A00F3825C /* PromotionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C640CBCF293A475A00F3825C /* PromotionCell.xib */; };
 		C640CBD5293A4D7C00F3825C /* NewestRecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C640CBD3293A4D7C00F3825C /* NewestRecipeCell.swift */; };
@@ -44,8 +42,6 @@
 		C640CBC02939112A00F3825C /* LayoutFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutFactory.swift; sourceTree = "<group>"; };
 		C640CBC32939135100F3825C /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		C640CBC42939135100F3825C /* CategoriesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCell.xib; sourceTree = "<group>"; };
-		C640CBC72939190200F3825C /* RegisterableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterableView.swift; sourceTree = "<group>"; };
-		C640CBC929391A8B00F3825C /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		C640CBCE293A475A00F3825C /* PromotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCell.swift; sourceTree = "<group>"; };
 		C640CBCF293A475A00F3825C /* PromotionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionCell.xib; sourceTree = "<group>"; };
 		C640CBD3293A4D7C00F3825C /* NewestRecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewestRecipeCell.swift; sourceTree = "<group>"; };
@@ -115,9 +111,7 @@
 		C606E89B2938F28900B7227A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C640CBC929391A8B00F3825C /* UICollectionView+Extension.swift */,
 				C640CBC02939112A00F3825C /* LayoutFactory.swift */,
-				C640CBC72939190200F3825C /* RegisterableView.swift */,
 				C640CBBF293910F800F3825C /* Extensions */,
 			);
 			path = Utils;
@@ -277,8 +271,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C640CBC52939135100F3825C /* CategoriesCell.swift in Sources */,
-				C640CBCA29391A8B00F3825C /* UICollectionView+Extension.swift in Sources */,
-				C640CBC82939190200F3825C /* RegisterableView.swift in Sources */,
 				C606E88A2938F26B00B7227A /* ViewController.swift in Sources */,
 				C640CBD5293A4D7C00F3825C /* NewestRecipeCell.swift in Sources */,
 				C606E8862938F26B00B7227A /* AppDelegate.swift in Sources */,

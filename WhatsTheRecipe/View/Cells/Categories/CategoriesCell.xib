@@ -11,18 +11,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoriesCell" customModule="WhatsTheRecipe" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="64" height="65"/>
+            <rect key="frame" x="0.0" y="0.0" width="99" height="65"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="64" height="65"/>
+                <rect key="frame" x="0.0" y="0.0" width="99" height="65"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcm-J3-LxN">
-                        <rect key="frame" x="0.0" y="0.0" width="64" height="65"/>
+                        <rect key="frame" x="14" y="0.0" width="71" height="65"/>
                         <color key="backgroundColor" name="orangeLT"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="65" id="kdx-ws-g0p"/>
-                            <constraint firstAttribute="width" constant="64" id="owv-xn-rBS"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="conerRaduis">
@@ -35,12 +34,12 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="jcm-J3-LxN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DD9-zM-DdM"/>
-                <constraint firstAttribute="trailing" secondItem="jcm-J3-LxN" secondAttribute="trailing" id="Rfq-El-e74"/>
+                <constraint firstAttribute="trailing" secondItem="jcm-J3-LxN" secondAttribute="trailing" constant="14" id="Rfq-El-e74"/>
                 <constraint firstAttribute="bottom" secondItem="jcm-J3-LxN" secondAttribute="bottom" id="iaq-7R-CB9"/>
-                <constraint firstItem="jcm-J3-LxN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="wfS-3j-KhU"/>
+                <constraint firstItem="jcm-J3-LxN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="14" id="vxK-ph-rWd"/>
             </constraints>
-            <size key="customSize" width="64" height="65"/>
-            <point key="canvasLocation" x="189.31297709923663" y="26.408450704225352"/>
+            <size key="customSize" width="99" height="65"/>
+            <point key="canvasLocation" x="139.69465648854961" y="18.661971830985916"/>
         </collectionViewCell>
     </objects>
     <resources>

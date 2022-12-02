@@ -21,5 +21,4 @@ struct Section: Hashable {
         case promotion
         case newestRecipe
     }
-    
 }

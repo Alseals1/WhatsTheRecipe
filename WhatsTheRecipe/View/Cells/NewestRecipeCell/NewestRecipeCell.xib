@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" name="backgroundLT"/>
+                        <color key="backgroundColor" name="strawberryRed"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="znx-7I-fJZ" secondAttribute="trailing" constant="8" id="111-uz-nSc"/>
                             <constraint firstItem="FWJ-ES-SXv" firstAttribute="top" secondItem="XL7-5u-et4" secondAttribute="bottom" constant="16" id="4v7-ja-A0S"/>
@@ -84,9 +84,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <namedColor name="backgroundLT">
-            <color red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="baseBlack">
             <color red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -95,6 +92,9 @@
         </namedColor>
         <namedColor name="blackLT">
             <color red="1" green="1" blue="1" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="strawberryRed">
+            <color red="1" green="0.30588235294117649" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
