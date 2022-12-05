@@ -9,16 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ViewController-->
-        <scene sceneID="A3l-lW-1YM">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ViewController" storyboardName="Main" referencedIdentifier="ViewController" id="UJj-EX-QmS" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="57h-JX-tv2"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gRz-0V-byF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-424" y="-282"/>
-        </scene>
         <!--Recipe View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -32,22 +22,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiJ-DM-VOB">
-                                <rect key="frame" x="16" y="59" width="48" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow"/>
-                                <connections>
-                                    <segue destination="3IP-wE-Tmm" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="t9p-Tz-nXQ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                     </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="soK-ZT-Etv"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="3IP-wE-Tmm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
@@ -68,7 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow" width="11.666666984558105" height="18"/>
         <namedColor name="backgroundLT">
             <color red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

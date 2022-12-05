@@ -15,32 +15,12 @@ class RecipeViewController: UIViewController {
        recipeDetail()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        recipeDetail()
-    }
-    
-//    override func viewdidappear(_ animated: Bool) {
-//        recipeDetail()
-//    }
-    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
+    override func viewDidDisappear(_ animated: Bool) {
+        let storyboard = UIStoryboard(name: "RecipeStoryboard", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "RecipeDetailViewController")
         
     }
-    
-    @IBAction func backButton(_ sender: UIButton) {
-        
-        
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
-//
-       
-//        viewController.modalTransitionStyle = .coverVertical
-//        viewController.modalPresentationStyle = .fullScreen
-//        viewController.dismiss(animated: true)
-       // self.present(viewController, animated: true )
-
-    }
-    
-    
+   
     func recipeDetail(){
         let storyboard = UIStoryboard(name: "RecipeStoryboard", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RecipeDetailViewController")
@@ -52,6 +32,7 @@ class RecipeViewController: UIViewController {
                 }),
                 .large()
             ]
+            
             presentationController.preferredCornerRadius = 30
             presentationController.prefersGrabberVisible = true
             presentationController.largestUndimmedDetentIdentifier = .large

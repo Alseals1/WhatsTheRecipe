@@ -77,7 +77,8 @@ extension HomeViewController: UICollectionViewDelegate {
         let viewController = storyboard.instantiateViewController(withIdentifier: "RecipeViewController")
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated: true )
+        navigationController?.pushViewController(viewController, animated: true)
+        
     }
 }
 
