@@ -22,6 +22,24 @@ class RecipeViewController: UIViewController {
 //    override func viewdidappear(_ animated: Bool) {
 //        recipeDetail()
 //    }
+    @IBAction func myUnwindAction(unwindSegue: UIStoryboardSegue){
+        
+    }
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        
+        
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
+//
+       
+//        viewController.modalTransitionStyle = .coverVertical
+//        viewController.modalPresentationStyle = .fullScreen
+//        viewController.dismiss(animated: true)
+       // self.present(viewController, animated: true )
+
+    }
+    
     
     func recipeDetail(){
         let storyboard = UIStoryboard(name: "RecipeStoryboard", bundle: nil)

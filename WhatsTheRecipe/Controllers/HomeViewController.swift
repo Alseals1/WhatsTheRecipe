@@ -1,12 +1,11 @@
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var dataSource: UICollectionViewDiffableDataSource<Section, Food>!
     private var snapshot = NSDiffableDataSourceSnapshot<Section, Food>()
     private var section = [Section]()
-    
     
     lazy var collectionViewLayout: UICollectionViewLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, env) -> NSCollectionLayoutSection? in
@@ -30,7 +29,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        modalPresentationStyle = .fullScreen
         setup()
     }
     
@@ -40,19 +39,6 @@ class ViewController: UIViewController {
         dummyData()
     }
 
-    func dummyData() {
-        let section = [
-            Section(kind: .categories, item: [Food(),Food(),Food(),Food(),Food(),Food(),Food(),Food()]),
-            Section(kind: .promotion, item: [Food()]),
-            Section(kind: .newestRecipe, item: [Food(),Food(),Food(),Food(),Food(),Food(),Food(),Food()])
-            
-        ]
-        snapshot = NSDiffableDataSourceSnapshot<Section, Food>()
-        snapshot.appendSections(section)
-        section.forEach { snapshot.appendItems($0.item, toSection: $0) }
-        dataSource.apply(snapshot, animatingDifferences: false)
-    }
-    
     func registerCell() {
         collectionView.register(CategoriesCell.nib, forCellWithReuseIdentifier: CategoriesCell.reuseIdentifier)
         collectionView.register(PromotionCell.nib, forCellWithReuseIdentifier: PromotionCell.reuseIdentifier)
@@ -86,12 +72,27 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDelegate {
+extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "RecipeStoryboard", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RecipeViewController")
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true )
+    }
+}
+
+extension HomeViewController {
+    func dummyData() {
+        let section = [
+            Section(kind: .categories, item: [Food(),Food(),Food(),Food(),Food(),Food(),Food(),Food()]),
+            Section(kind: .promotion, item: [Food()]),
+            Section(kind: .newestRecipe, item: [Food(),Food(),Food(),Food(),Food(),Food(),Food(),Food()])
+            
+        ]
+        snapshot = NSDiffableDataSourceSnapshot<Section, Food>()
+        snapshot.appendSections(section)
+        section.forEach { snapshot.appendItems($0.item, toSection: $0) }
+        dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
