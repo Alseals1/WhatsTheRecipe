@@ -30,10 +30,10 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         modalPresentationStyle = .fullScreen
-        setup()
+        initialize()
     }
     
-    func setup() {
+    func initialize() {
         setupDataSource()
         registerCell()
         dummyData()
@@ -67,7 +67,6 @@ class HomeViewController: UIViewController {
                     
                 default: return nil
             }
-            
         }
     }
 }

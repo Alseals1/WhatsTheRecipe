@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WhatsTheRecipe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="WhatsTheRecipe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,20 +82,11 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="RV6-cU-c5W" id="KYa-ib-mmS"/>
-                        <segue destination="oPi-2Y-9Q6" kind="custom" id="rmX-w3-UpZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="81.679389312977094" y="3.5211267605633805"/>
-        </scene>
-        <!--RecipeViewController-->
-        <scene sceneID="6vq-FL-YGu">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="RecipeViewController" storyboardName="RecipeStoryboard" referencedIdentifier="RecipeViewController" id="oPi-2Y-9Q6" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="R9i-pg-51q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="692" y="-143"/>
         </scene>
     </scenes>
     <resources>
