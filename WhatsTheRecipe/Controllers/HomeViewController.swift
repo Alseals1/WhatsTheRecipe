@@ -54,15 +54,7 @@ class HomeViewController: UIViewController {
         collectionView.register(HeaderCell.nib, forSupplementaryViewOfKind: HeaderCell.kind, withReuseIdentifier: HeaderCell.reuseIdentifier)
         collectionView.collectionViewLayout = collectionViewLayout
     }
-    
-    func configure<T: SelfConfiguringCell>(_ cellType: T.Type, with food: Food, for indexPath: IndexPath) -> T {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath) as? T else {
-            fatalError("Unable to dequeue \(cellType)")
-        }
-        cell.configure(with: food)
-        return cell
-    }
-    
+ 
     func setupDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Food>(collectionView: collectionView){ [weak self] (collectionView, indexPath, food) in
             guard let self = self else { return UICollectionViewCell() }
@@ -120,6 +112,14 @@ extension HomeViewController: UICollectionViewDelegate {
 }
 
 extension HomeViewController {
+    func configure<T: SelfConfiguringCell>(_ cellType: T.Type, with food: Food, for indexPath: IndexPath) -> T {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath) as? T else {
+            fatalError("Unable to dequeue \(cellType)")
+        }
+        cell.configure(with: food)
+        return cell
+    }
+    
     func dummyData() {
         let section = [
             Section(kind: .categories, item:[
@@ -142,3 +142,5 @@ extension HomeViewController {
         dataSource.apply(snapshot, animatingDifferences: false)
     }
 }
+
+
