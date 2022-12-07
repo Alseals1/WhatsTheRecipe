@@ -3,11 +3,31 @@ import UIKit
 class RecipeViewController: UIViewController {
     @IBOutlet weak var detailImage: UIImageView!
     
+    @IBOutlet weak var heartButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
        recipeDetail()
     }
-
+    override func viewDidDisappear(_ animated: Bool) {
+        navigationController?.viewControllers.remove(at: 1)
+    }
+    
+    
+    @IBAction func heartButtonPressed(_ sender: UIButton) {
+          sender.isSelected.toggle()
+        if sender.isSelected {
+            let likedImage = UIImage(systemName: "hand.thumbsup.fill")
+            let tintedImage = likedImage?.withRenderingMode(.alwaysTemplate)
+             heartButton.setImage(tintedImage, for: .normal)
+            heartButton.tintColor = UIColor(named: "strawberryRed")
+        }else {
+            heartButton.setImage(UIImage(named: "btnSave"), for: .normal)
+        }
+       
+        
+     
+    }
+    
     func recipeDetail(){
         let storyboard = UIStoryboard(name: "RecipeStoryboard", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RecipeDetailViewController")

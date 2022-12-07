@@ -41,6 +41,7 @@ class HomeViewController: UIViewController {
     
     func initialize() {
         setupDataSource()
+        setupHeader()
         registerCell()
         dummyData()
     }
@@ -50,6 +51,7 @@ class HomeViewController: UIViewController {
         collectionView.register(PromotionCell.nib, forCellWithReuseIdentifier: PromotionCell.reuseIdentifier)
         collectionView.register(NewestRecipeCell.nib, forCellWithReuseIdentifier: NewestRecipeCell.reuseIdentifier)
         
+        collectionView.register(HeaderCell.nib, forSupplementaryViewOfKind: HeaderCell.kind, withReuseIdentifier: HeaderCell.reuseIdentifier)
         collectionView.collectionViewLayout = collectionViewLayout
     }
     
@@ -82,6 +84,28 @@ class HomeViewController: UIViewController {
                     
                 default: return nil
             }
+        }
+    }
+    
+    func setupHeader() {
+        dataSource.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
+            guard let self = self else { return UICollectionReusableView() }
+            
+            let snapshot = self.dataSource.snapshot()
+            let sectionkind = snapshot.sectionIdentifiers[indexPath.section].kind
+            
+            switch sectionkind {
+                case .categories:
+                    let cell = collectionView.dequeueReusableSupplementaryView(ofKind: HeaderCell.kind, withReuseIdentifier: HeaderCell.reuseIdentifier, for: indexPath) as! HeaderCell
+                    cell.setupTitle("Categories")
+                    return cell
+                case .newestRecipe:
+                    let cell = collectionView.dequeueReusableSupplementaryView(ofKind: HeaderCell.kind, withReuseIdentifier: HeaderCell.reuseIdentifier, for: indexPath) as! HeaderCell
+                    cell.setupTitle("Newest Recipe")
+                    return cell
+                default: return nil
+            }
+            
         }
     }
 }
