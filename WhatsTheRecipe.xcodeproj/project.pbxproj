@@ -92,6 +92,7 @@
 				C606E89B2938F28900B7227A /* Utils */,
 				C606E89A2938F28200B7227A /* Model */,
 				C606E89D2938F2B300B7227A /* Controllers */,
+				C640CBC22939133300F3825C /* Cells */,
 				C606E8992938F27C00B7227A /* View */,
 				C606E88E2938F26C00B7227A /* Assets.xcassets */,
 				C606E8932938F26C00B7227A /* Info.plist */,
@@ -138,7 +139,6 @@
 		C606E89D2938F2B300B7227A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C640CBC22939133300F3825C /* Cells */,
 				C606E8892938F26B00B7227A /* HomeViewController.swift */,
 				C672DDD4293A7703008E16AE /* RecipeViewController.swift */,
 				C672DDFA293A7D7C008E16AE /* RecipeDetailViewController.swift */,
