@@ -59,7 +59,6 @@ class HomeViewController: UIViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Unable to dequeue \(cellType)")
         }
-
         cell.configure(with: food)
         return cell
     }
@@ -105,7 +104,6 @@ class HomeViewController: UIViewController {
                     return cell
                 default: return nil
             }
-            
         }
     }
 }

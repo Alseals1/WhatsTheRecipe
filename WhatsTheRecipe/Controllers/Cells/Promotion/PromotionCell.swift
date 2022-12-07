@@ -16,5 +16,4 @@ class PromotionCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

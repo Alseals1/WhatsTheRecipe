@@ -19,6 +19,7 @@ class HeaderCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
     func setupTitle(_ title: String) {
         headerTitleLbl.text = title
     }
