@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zG-7y-tQl">
                         <rect key="frame" x="0.0" y="0.0" width="323" height="105"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LUj-0N-kH3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detailFoodImage" translatesAutoresizingMaskIntoConstraints="NO" id="LUj-0N-kH3">
                                 <rect key="frame" x="10" y="14" width="69" height="77"/>
                                 <color key="backgroundColor" red="0.95006150010000001" green="0.94758731129999996" blue="0.72799446180000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -36,7 +36,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DINNER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znx-7I-fJZ">
                                 <rect key="frame" x="93" y="16" width="222" height="15"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                <color key="textColor" name="baseBlack"/>
+                                <color key="textColor" name="greyReg"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spicy Chicken Caremel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XL7-5u-et4">
@@ -88,17 +88,18 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="detailFoodImage" width="375" height="433"/>
         <namedColor name="backgroundLT">
             <color red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="baseBlack">
-            <color red="0.13725490196078433" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="baseOrange">
             <color red="1" green="0.49803921568627452" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="blackLT">
             <color red="1" green="1" blue="1" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greyReg">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -7,15 +7,21 @@
 
 import UIKit
 
-class CategoriesCell: UICollectionViewCell {
+class CategoriesCell: UICollectionViewCell, SelfConfiguringCell {
     
     static let reuseIdentifier = String(describing: CategoriesCell.self)
-    static let kind = String(describing: CategoriesCell.self)
+   static let kind = String(describing: CategoriesCell.self)
     static let nib = UINib(nibName: String(describing: CategoriesCell.self), bundle: nil)
+    
+    @IBOutlet weak var iconImage: UIImageView!
+  
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
-
+    func configure(with food: Food) {
+        iconImage.image = UIImage(named: food.image)
+    }
+    
 }

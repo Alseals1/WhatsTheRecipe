@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,10 +18,23 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E2X-ut-P88">
                         <rect key="frame" x="0.0" y="0.0" width="321" height="103"/>
-                        <color key="backgroundColor" name="charcoal"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner" translatesAutoresizingMaskIntoConstraints="NO" id="3Iw-3a-Blu">
+                                <rect key="frame" x="0.0" y="0.0" width="321" height="103"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="sbI-7h-dRX"/>
+                                    <constraint firstAttribute="height" constant="103" id="yoq-I6-6Go"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="321" id="7PY-Wz-Jo0"/>
                             <constraint firstAttribute="height" constant="103" id="BUh-pU-Ei6"/>
+                            <constraint firstItem="3Iw-3a-Blu" firstAttribute="top" secondItem="E2X-ut-P88" secondAttribute="top" id="ItQ-jZ-8R9"/>
+                            <constraint firstItem="3Iw-3a-Blu" firstAttribute="leading" secondItem="E2X-ut-P88" secondAttribute="leading" id="biT-V3-fah"/>
+                            <constraint firstAttribute="bottom" secondItem="3Iw-3a-Blu" secondAttribute="bottom" id="hcn-L8-fTP"/>
+                            <constraint firstAttribute="trailing" secondItem="3Iw-3a-Blu" secondAttribute="trailing" id="q78-F8-vrV"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="conerRaduis">
@@ -44,8 +56,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <namedColor name="charcoal">
-            <color red="0.28627450980392155" green="0.25098039215686274" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="banner" width="321" height="103"/>
     </resources>
 </document>

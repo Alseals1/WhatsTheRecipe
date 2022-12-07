@@ -1,26 +1,13 @@
-//
-//  RecipeViewController.swift
-//  WhatsTheRecipe
-//
-//  Created by Alandis Seals on 12/2/22.
-//
-
 import UIKit
 
 class RecipeViewController: UIViewController {
-
+    @IBOutlet weak var detailImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
        recipeDetail()
     }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        let storyboard = UIStoryboard(name: "RecipeStoryboard", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "RecipeDetailViewController")
-        
-    }
-   
+
     func recipeDetail(){
         let storyboard = UIStoryboard(name: "RecipeStoryboard", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RecipeDetailViewController")
@@ -32,15 +19,10 @@ class RecipeViewController: UIViewController {
                 }),
                 .large()
             ]
-            
             presentationController.preferredCornerRadius = 30
             presentationController.prefersGrabberVisible = true
             presentationController.largestUndimmedDetentIdentifier = .large
         }
-        
         self.present(viewController, animated: true)
     }
-
-
-
 }

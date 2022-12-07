@@ -19,8 +19,16 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcm-J3-LxN">
                         <rect key="frame" x="14" y="0.0" width="71" height="65"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="pSU-4A-RbW">
+                                <rect key="frame" x="18" y="18" width="35" height="29"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" name="orangeLT"/>
                         <constraints>
+                            <constraint firstItem="pSU-4A-RbW" firstAttribute="centerX" secondItem="jcm-J3-LxN" secondAttribute="centerX" id="23F-zR-e7h"/>
+                            <constraint firstItem="pSU-4A-RbW" firstAttribute="centerY" secondItem="jcm-J3-LxN" secondAttribute="centerY" id="Ps3-eA-h32"/>
                             <constraint firstAttribute="height" constant="65" id="kdx-ws-g0p"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -39,10 +47,14 @@
                 <constraint firstItem="jcm-J3-LxN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="14" id="vxK-ph-rWd"/>
             </constraints>
             <size key="customSize" width="99" height="65"/>
+            <connections>
+                <outlet property="iconImage" destination="pSU-4A-RbW" id="Bzp-Z8-EN7"/>
+            </connections>
             <point key="canvasLocation" x="139.69465648854961" y="18.661971830985916"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="icon" width="35" height="29"/>
         <namedColor name="orangeLT">
             <color red="1" green="0.49803921568627452" blue="0.13725490196078433" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

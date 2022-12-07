@@ -1,6 +1,12 @@
 import UIKit
 
+protocol SelfConfiguringCell {
+    static var reuseIdentifier: String { get }
+    func configure(with food: Food)
+}
+
 class HomeViewController: UIViewController {
+   
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var dataSource: UICollectionViewDiffableDataSource<Section, Food>!
@@ -47,8 +53,17 @@ class HomeViewController: UIViewController {
         collectionView.collectionViewLayout = collectionViewLayout
     }
     
+    func configure<T: SelfConfiguringCell>(_ cellType: T.Type, with food: Food, for indexPath: IndexPath) -> T {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath) as? T else {
+            fatalError("Unable to dequeue \(cellType)")
+        }
+
+        cell.configure(with: food)
+        return cell
+    }
+    
     func setupDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section, Food>(collectionView: collectionView){ [weak self] (collectionView, indexPath, itemIdentifier) in
+        dataSource = UICollectionViewDiffableDataSource<Section, Food>(collectionView: collectionView){ [weak self] (collectionView, indexPath, food) in
             guard let self = self else { return UICollectionViewCell() }
             
             let snapshot = self.dataSource.snapshot()
@@ -56,8 +71,8 @@ class HomeViewController: UIViewController {
             
             switch sectionKind {
                 case .categories:
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCell.reuseIdentifier, for: indexPath)
-                    return cell
+                  return self.configure(CategoriesCell.self, with: food, for: indexPath)
+                  
                 case .promotion:
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PromotionCell.reuseIdentifier, for: indexPath)
                     return cell
@@ -85,7 +100,16 @@ extension HomeViewController: UICollectionViewDelegate {
 extension HomeViewController {
     func dummyData() {
         let section = [
-            Section(kind: .categories, item: [Food(),Food(),Food(),Food(),Food(),Food(),Food(),Food()]),
+            Section(kind: .categories, item:[
+                Food(image: "icon 4"),
+                Food(image: "icon 6"),
+                Food(image: "icon"),
+                Food(image: "icon 1"),
+                Food(image: "icon 2"),
+                Food(image: "icon 5"),
+                Food(image: "icon 3"),
+                Food(image: "icon")
+            ]),
             Section(kind: .promotion, item: [Food()]),
             Section(kind: .newestRecipe, item: [Food(),Food(),Food(),Food(),Food(),Food(),Food(),Food()])
             
