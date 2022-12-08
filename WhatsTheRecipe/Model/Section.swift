@@ -20,5 +20,8 @@ struct Section: Hashable {
         case categories
         case promotion
         case newestRecipe
+        case ingredient
+        case cookingTime
+        case cookDetail
     }
 }
