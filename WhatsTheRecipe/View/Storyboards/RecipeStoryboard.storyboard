@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-Fi-1Gc">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BB8-uc-Wak">
                                     <size key="itemSize" width="128" height="128"/>
@@ -35,7 +35,7 @@
                             <constraint firstItem="jgL-Fi-1Gc" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="L80-xf-6OQ"/>
                             <constraint firstItem="jgL-Fi-1Gc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QEP-zb-NZ5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jgL-Fi-1Gc" secondAttribute="trailing" id="YpS-6y-tPl"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jgL-Fi-1Gc" secondAttribute="bottom" id="mPi-DD-hWI"/>
+                            <constraint firstAttribute="bottom" secondItem="jgL-Fi-1Gc" secondAttribute="bottom" id="mPi-DD-hWI"/>
                         </constraints>
                     </view>
                     <connections>
