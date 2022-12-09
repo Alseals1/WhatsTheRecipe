@@ -57,7 +57,7 @@ struct LayoutSectionFactory: LayoutSection {
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
        
         let section = NSCollectionLayoutSection(group: group)
-        
+        section.contentInsets = NSDirectionalEdgeInsets(top: -100, leading: 0, bottom: 0, trailing: 0)
         return section
     }
     func cookTimeLayout() -> NSCollectionLayoutSection {

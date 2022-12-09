@@ -94,9 +94,7 @@
                             <constraint firstItem="USW-Zf-bp0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jXp-a6-ZZl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3ba-EH-I8Q">
-                        <barButtonItem key="backBarButtonItem" title=" " id="x19-9Z-bcb"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="3ba-EH-I8Q"/>
                     <connections>
                         <outlet property="collectionView" destination="RV6-cU-c5W" id="KYa-ib-mmS"/>
                     </connections>
@@ -110,11 +108,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U8B-kt-YIm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="arrow" backIndicatorTransitionMaskImage="arrow" id="SEu-bx-WfU">
+                    <navigationBar key="navigationBar" contentMode="scaleAspectFill" backIndicatorImage="arrow" backIndicatorTransitionMaskImage="arrow" id="SEu-bx-WfU">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <navigationBarAppearance key="standardAppearance">
+                        <navigationBarAppearance key="standardAppearance" backgroundEffect="regular">
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </navigationBarAppearance>
                     </navigationBar>
