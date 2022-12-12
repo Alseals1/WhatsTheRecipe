@@ -34,18 +34,18 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DINNER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znx-7I-fJZ">
-                                <rect key="frame" x="93" y="16" width="222" height="15"/>
+                                <rect key="frame" x="93" y="16" width="222" height="15.666666666666664"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                 <color key="textColor" name="greyReg"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spicy Chicken Caremel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XL7-5u-et4">
-                                <rect key="frame" x="93" y="34" width="222" height="19.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Spicy Chicken Caremel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XL7-5u-et4">
+                                <rect key="frame" x="93" y="34.666666666666664" width="222" height="19.333333333333336"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chef Marchel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWJ-ES-SXv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Chef Marchel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWJ-ES-SXv">
                                 <rect key="frame" x="93" y="70" width="222" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <color key="textColor" name="baseOrange"/>
@@ -64,6 +64,7 @@
                             <constraint firstItem="XL7-5u-et4" firstAttribute="leading" secondItem="LUj-0N-kH3" secondAttribute="trailing" constant="14" id="gmq-rK-bD5"/>
                             <constraint firstItem="LUj-0N-kH3" firstAttribute="leading" secondItem="3zG-7y-tQl" secondAttribute="leading" constant="10" id="inX-X7-q2g"/>
                             <constraint firstAttribute="trailing" secondItem="XL7-5u-et4" secondAttribute="trailing" constant="8" id="sqa-DG-VQd"/>
+                            <constraint firstItem="FWJ-ES-SXv" firstAttribute="top" secondItem="XL7-5u-et4" secondAttribute="bottom" constant="16" id="su0-ED-3aZ"/>
                             <constraint firstItem="FWJ-ES-SXv" firstAttribute="leading" secondItem="LUj-0N-kH3" secondAttribute="trailing" constant="14" id="whZ-dF-9Qi"/>
                             <constraint firstItem="LUj-0N-kH3" firstAttribute="top" secondItem="3zG-7y-tQl" secondAttribute="top" constant="14" id="zoH-Zi-GKe"/>
                         </constraints>
@@ -84,6 +85,12 @@
                 <constraint firstAttribute="bottom" secondItem="3zG-7y-tQl" secondAttribute="bottom" id="RTU-hf-QVb"/>
             </constraints>
             <size key="customSize" width="391" height="126"/>
+            <connections>
+                <outlet property="chefNameLbl" destination="FWJ-ES-SXv" id="Aat-Gr-BHB"/>
+                <outlet property="mealImage" destination="LUj-0N-kH3" id="pXe-FB-MXD"/>
+                <outlet property="mealLbl" destination="XL7-5u-et4" id="ba1-9T-VZ2"/>
+                <outlet property="typeofFoodLbl" destination="znx-7I-fJZ" id="rMi-wS-G0W"/>
+            </connections>
             <point key="canvasLocation" x="183.96946564885496" y="46.126760563380287"/>
         </collectionViewCell>
     </objects>
@@ -99,7 +106,7 @@
             <color red="1" green="1" blue="1" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="greyReg">
-            <color red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -55,7 +55,7 @@ struct LayoutSectionFactory: LayoutSection {
     func newestRecipeLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(323), heightDimension: .absolute(105))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(323), heightDimension: .absolute(115))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
         group.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 0, bottom: 0, trailing: 0)
         let section = NSCollectionLayoutSection(group: group)

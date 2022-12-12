@@ -76,8 +76,7 @@ class HomeViewController: UIViewController {
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PromotionCell.reuseIdentifier, for: indexPath)
                     return cell
                 case .newestRecipe:
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NewestRecipeCell.reuseIdentifier, for: indexPath)
-                    return cell
+                    return self.configure(NewestRecipeCell.self, with: food, for: indexPath)
                     
                 default: return nil
             }
@@ -113,6 +112,7 @@ extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "RecipeStoryboard", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RecipeViewController")
+        
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(viewController, animated: true)
@@ -144,7 +144,15 @@ extension HomeViewController {
                 Food(image: "more")
             ]),
             Section(kind: .promotion, item: [Food()]),
-            Section(kind: .newestRecipe, item: [Food(),Food(),Food(),Food(),Food(),Food(),Food(),Food()])
+            Section(kind: .newestRecipe, item: [
+                Food(title: "Bone-In Ribeye * 18 oz.", typeOfFood: "Dinner", chefName: "Alandis Seals", image: "steak"),
+                Food(title: "Vegan Pancakes", typeOfFood: "Breakfast", chefName: "Daesy V", image: "pancakes"),
+                Food(title: "Tasmanian Chili", typeOfFood: "Dinner", chefName: "Taylor Smith", image: "chili"),
+                Food(title: "Lemon Pepper Wings", typeOfFood: "Lunch", chefName: "Drake", image: "wings"),
+                Food(title: "Spicy chicken caramel", typeOfFood: "Dinner", chefName: "Mindy Douglas", image: "detailDemoImage"),
+                Food(title: "Sweet Chook O' Sandwich", typeOfFood: "Lunch", chefName: "Santita Humphries", image: "burger"),
+                Food(title: "Steak Salad", typeOfFood: "Dinner", chefName: "Zachary Farmer", image: "salad"),
+                Food(title: "Chicken -n- Waffles", typeOfFood: "breakfast", chefName: "Craig Clayton", image: "chickwaffles")])
             
         ]
         snapshot = NSDiffableDataSourceSnapshot<Section, Food>()
