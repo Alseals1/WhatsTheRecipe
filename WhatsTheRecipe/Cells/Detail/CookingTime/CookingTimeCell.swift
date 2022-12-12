@@ -1,7 +1,6 @@
 import UIKit
 
 class CookingTimeCell: UICollectionViewCell {
-    
     static let reuseIdentifier = String(describing: CookingTimeCell.self)
     static let kind = String(describing: CookingTimeCell.self)
     static let nib = UINib(nibName: String(describing: CookingTimeCell.self), bundle: nil)
@@ -10,5 +9,4 @@ class CookingTimeCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
 }

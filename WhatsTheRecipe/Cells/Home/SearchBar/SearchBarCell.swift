@@ -1,10 +1,3 @@
-//
-//  SearchBarCell.swift
-//  WhatsTheRecipe
-//
-//  Created by Alandis Seals on 12/12/22.
-//
-
 import UIKit
 
 class SearchBarCell: UICollectionReusableView {
@@ -16,5 +9,4 @@ class SearchBarCell: UICollectionReusableView {
         super.awakeFromNib()
         // Initialization code
     }
-    
 }

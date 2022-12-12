@@ -10,5 +10,4 @@ class NewestRecipeCell: UICollectionViewCell {
         super.awakeFromNib()
        
     }
-
 }

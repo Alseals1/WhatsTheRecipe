@@ -13,7 +13,6 @@ class RecipeViewController: UIViewController {
             let snapshot = self.datasource.snapshot()
             let sectionKind = snapshot.sectionIdentifiers[sectionIndex].kind
             
-            
             switch sectionKind {
                 case .cookDetail:
                     return LayoutSectionFactory().cookDetailLayout()
@@ -30,10 +29,8 @@ class RecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-      
-        
        initialize()
+        
     }
     
     private func initialize() {
@@ -43,24 +40,13 @@ class RecipeViewController: UIViewController {
         dummyData()
     }
     
-   
-    
-    //IBAction Heart Button
-    /*
-    @IBAction func heartButtonPressed(_ sender: UIButton) {
-         
-    }
-    */
-    
     private func registerCell() {
-        
         collectionView.register(HeaderDetailCell.nib, forCellWithReuseIdentifier: HeaderDetailCell.reuseIdentifier)
         collectionView.register(CookingTimeCell.nib, forCellWithReuseIdentifier: CookingTimeCell.reuseIdentifier)
         collectionView.register(IngredientsCell.nib, forCellWithReuseIdentifier: IngredientsCell.reuseIdentifier)
         
         collectionView.register(HeaderCell.nib, forSupplementaryViewOfKind: HeaderCell.kind, withReuseIdentifier: HeaderCell.reuseIdentifier)
         collectionView.collectionViewLayout = collectionViewLayout
-        
     }
     
     private func setupData() {
@@ -86,6 +72,7 @@ class RecipeViewController: UIViewController {
             }
         })
     }
+    
     func setupHeader() {
         datasource.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
             guard let self = self else { return UICollectionReusableView() }
@@ -127,12 +114,11 @@ extension RecipeViewController {
                 Food(recipe: "4 stems mint, leaves only"),
                 Food(recipe: "2 cup marinade"),
                 Food(recipe: "2 tsp Butter")
-                ])
+            ])
         ]
         snapshot = NSDiffableDataSourceSnapshot<Section, Food>()
         snapshot.appendSections(section)
         section.forEach { snapshot.appendItems($0.item, toSection: $0) }
         datasource.apply(snapshot, animatingDifferences: false)
     }
-    
 }

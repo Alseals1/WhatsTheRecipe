@@ -13,10 +13,10 @@
             <rect key="frame" x="0.0" y="0.0" width="549" height="84"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="5LY-4A-RdB">
-                    <rect key="frame" x="24" y="0.0" width="501" height="50"/>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search recipe here" translatesAutoresizingMaskIntoConstraints="NO" id="5LY-4A-RdB">
+                    <rect key="frame" x="24" y="-10" width="501" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="ebP-Ii-PFm"/>
+                        <constraint firstAttribute="height" constant="60" id="ebP-Ii-PFm"/>
                     </constraints>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
@@ -24,7 +24,6 @@
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <constraints>
                 <constraint firstItem="5LY-4A-RdB" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="24" id="K6J-3M-ldc"/>
-                <constraint firstItem="5LY-4A-RdB" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="T5S-we-Hus"/>
                 <constraint firstItem="5LY-4A-RdB" firstAttribute="bottom" secondItem="VXr-Tz-HHm" secondAttribute="bottom" id="aaI-C5-ibs"/>
                 <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="5LY-4A-RdB" secondAttribute="trailing" constant="24" id="i1E-nV-1mJ"/>
             </constraints>

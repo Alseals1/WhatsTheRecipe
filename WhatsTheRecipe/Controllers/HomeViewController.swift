@@ -6,7 +6,6 @@ protocol SelfConfiguringCell {
 }
 
 class HomeViewController: UIViewController {
-   
     @IBOutlet weak var collectionView: UICollectionView!
     
     private var dataSource: UICollectionViewDiffableDataSource<Section, Food>!
@@ -55,8 +54,8 @@ class HomeViewController: UIViewController {
         collectionView.register(NewestRecipeCell.nib, forCellWithReuseIdentifier: NewestRecipeCell.reuseIdentifier)
         
         collectionView.register(HeaderCell.nib, forSupplementaryViewOfKind: HeaderCell.kind, withReuseIdentifier: HeaderCell.reuseIdentifier)
-        
         collectionView.register(SearchBarCell.nib, forSupplementaryViewOfKind: SearchBarCell.kind, withReuseIdentifier: SearchBarCell.reuseIdentifier)
+        
         collectionView.collectionViewLayout = collectionViewLayout
     }
  
@@ -71,10 +70,8 @@ class HomeViewController: UIViewController {
                 case .profileInfo:
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileInfoCell.reuseIdentifier, for: indexPath)
                     return cell
-                    
                 case .categories:
                   return self.configure(CategoriesCell.self, with: food, for: indexPath)
-                  
                 case .promotion:
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PromotionCell.reuseIdentifier, for: indexPath)
                     return cell
@@ -97,9 +94,7 @@ class HomeViewController: UIViewController {
             switch sectionkind {
                 case .profileInfo:
                     let cell = collectionView.dequeueReusableSupplementaryView(ofKind: SearchBarCell.kind, withReuseIdentifier: SearchBarCell.reuseIdentifier, for: indexPath)
-                    
                     return cell
-                    
                 case .categories:
                     let cell = collectionView.dequeueReusableSupplementaryView(ofKind: HeaderCell.kind, withReuseIdentifier: HeaderCell.reuseIdentifier, for: indexPath) as! HeaderCell
                     cell.setupTitle("Categories")
@@ -121,7 +116,6 @@ extension HomeViewController: UICollectionViewDelegate {
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(viewController, animated: true)
-        
     }
 }
 
@@ -142,7 +136,7 @@ extension HomeViewController {
             Section(kind: .categories, item:[
                 Food(image: "icon4"),
                 Food(image: "icon6"),
-                Food(image: "icon0"),
+                Food(image: "icon7"),
                 Food(image: "icon1"),
                 Food(image: "icon2"),
                 Food(image: "icon5"),

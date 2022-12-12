@@ -1,10 +1,3 @@
-//
-//  PromotionCell.swift
-//  WhatsTheRecipe
-//
-//  Created by Alandis Seals on 12/2/22.
-//
-
 import UIKit
 
 class PromotionCell: UICollectionViewCell {

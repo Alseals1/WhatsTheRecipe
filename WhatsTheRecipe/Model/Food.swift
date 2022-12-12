@@ -13,5 +13,4 @@ struct Food: Hashable {
         self.image = image
         self.recipe = recipe
     }
-    
 }
