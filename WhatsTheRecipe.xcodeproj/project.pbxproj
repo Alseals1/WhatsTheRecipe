@@ -34,6 +34,10 @@
 		C66D662F294257E2008AD1C7 /* IngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66D662D294257E2008AD1C7 /* IngredientsCell.xib */; };
 		C672DDD3293A76CB008E16AE /* RecipeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C672DDD2293A76CB008E16AE /* RecipeStoryboard.storyboard */; };
 		C672DDD5293A7703008E16AE /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672DDD4293A7703008E16AE /* RecipeViewController.swift */; };
+		C6B4DCD029478B190046BE16 /* SearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B4DCCE29478B190046BE16 /* SearchBarCell.swift */; };
+		C6B4DCD129478B190046BE16 /* SearchBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B4DCCF29478B190046BE16 /* SearchBarCell.xib */; };
+		C6B4DCD529478DE40046BE16 /* ProfileInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B4DCD329478DE40046BE16 /* ProfileInfoCell.swift */; };
+		C6B4DCD629478DE40046BE16 /* ProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B4DCD429478DE40046BE16 /* ProfileInfoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		C66D662D294257E2008AD1C7 /* IngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsCell.xib; sourceTree = "<group>"; };
 		C672DDD2293A76CB008E16AE /* RecipeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeStoryboard.storyboard; sourceTree = "<group>"; };
 		C672DDD4293A7703008E16AE /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		C6B4DCCE29478B190046BE16 /* SearchBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCell.swift; sourceTree = "<group>"; };
+		C6B4DCCF29478B190046BE16 /* SearchBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarCell.xib; sourceTree = "<group>"; };
+		C6B4DCD329478DE40046BE16 /* ProfileInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoCell.swift; sourceTree = "<group>"; };
+		C6B4DCD429478DE40046BE16 /* ProfileInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileInfoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +230,8 @@
 		C66D661F294235E8008AD1C7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				C6B4DCD229478DB80046BE16 /* ProfileInfo */,
+				C6B4DCCD29478B000046BE16 /* SearchBar */,
 				C640CBCB293A46B600F3825C /* Categories */,
 				C640CBCD293A474000F3825C /* Promotion */,
 				C640CBD2293A4D5500F3825C /* NewestRecipeCell */,
@@ -264,6 +274,24 @@
 				C66D662D294257E2008AD1C7 /* IngredientsCell.xib */,
 			);
 			path = Ingredients;
+			sourceTree = "<group>";
+		};
+		C6B4DCCD29478B000046BE16 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				C6B4DCCE29478B190046BE16 /* SearchBarCell.swift */,
+				C6B4DCCF29478B190046BE16 /* SearchBarCell.xib */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		C6B4DCD229478DB80046BE16 /* ProfileInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C6B4DCD329478DE40046BE16 /* ProfileInfoCell.swift */,
+				C6B4DCD429478DE40046BE16 /* ProfileInfoCell.xib */,
+			);
+			path = ProfileInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,11 +357,13 @@
 				C606E8922938F26C00B7227A /* LaunchScreen.storyboard in Resources */,
 				C66D662A294241DD008AD1C7 /* CookingTimeCell.xib in Resources */,
 				C640CBD6293A4D7C00F3825C /* NewestRecipeCell.xib in Resources */,
+				C6B4DCD129478B190046BE16 /* SearchBarCell.xib in Resources */,
 				C640CBC62939135100F3825C /* CategoriesCell.xib in Resources */,
 				C606E88F2938F26C00B7227A /* Assets.xcassets in Resources */,
 				C66D662F294257E2008AD1C7 /* IngredientsCell.xib in Resources */,
 				C640CBD1293A475A00F3825C /* PromotionCell.xib in Resources */,
 				C606E88D2938F26B00B7227A /* Main.storyboard in Resources */,
+				C6B4DCD629478DE40046BE16 /* ProfileInfoCell.xib in Resources */,
 				C672DDD3293A76CB008E16AE /* RecipeStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +381,7 @@
 				C606E8862938F26B00B7227A /* AppDelegate.swift in Sources */,
 				C640CBBA29390D2700F3825C /* Food.swift in Sources */,
 				C66D6624294236C4008AD1C7 /* HeaderDetailCell.swift in Sources */,
+				C6B4DCD029478B190046BE16 /* SearchBarCell.swift in Sources */,
 				C640CBBE29390E4C00F3825C /* Section.swift in Sources */,
 				C66D661D2940F37F008AD1C7 /* HeaderCell.swift in Sources */,
 				C640CBC12939112B00F3825C /* LayoutFactory.swift in Sources */,
@@ -361,6 +392,7 @@
 				C640CBD0293A475A00F3825C /* PromotionCell.swift in Sources */,
 				C606E8A02938F4A300B7227A /* Extention+UIView.swift in Sources */,
 				C640CBBC29390E1200F3825C /* Kind.swift in Sources */,
+				C6B4DCD529478DE40046BE16 /* ProfileInfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +546,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,6 +574,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

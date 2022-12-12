@@ -6,9 +6,29 @@ protocol LayoutSection {
     func cookDetailLayout() -> NSCollectionLayoutSection
     func cookTimeLayout() -> NSCollectionLayoutSection
     func ingredientLayout() -> NSCollectionLayoutSection
+    func profileInfoLayout() -> NSCollectionLayoutSection
+   
 }
 
 struct LayoutSectionFactory: LayoutSection {
+    
+    func profileInfoLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(80))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+       
+        let section = NSCollectionLayoutSection(group: group)
+        let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .absolute(50))
+        
+        let sectionFooter = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize, elementKind: SearchBarCell.kind, alignment: .bottom)
+        section.boundarySupplementaryItems = [sectionFooter]
+        section.orthogonalScrollingBehavior = .groupPagingCentered
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
+        section.interGroupSpacing = 14
+        return section
+    }
+    
     func categoryLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(87), heightDimension: .absolute(64))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -17,8 +37,10 @@ struct LayoutSectionFactory: LayoutSection {
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 4)
         group.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 0, bottom: 0, trailing: 14)
         let section = NSCollectionLayoutSection(group: group)
+        
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(60))
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: HeaderCell.kind, alignment: .topLeading)
+
         section.boundarySupplementaryItems = [sectionHeader]
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 14)
         section.interGroupSpacing = 14
@@ -60,6 +82,7 @@ struct LayoutSectionFactory: LayoutSection {
         section.contentInsets = NSDirectionalEdgeInsets(top: -100, leading: 0, bottom: 0, trailing: 0)
         return section
     }
+    
     func cookTimeLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -71,6 +94,7 @@ struct LayoutSectionFactory: LayoutSection {
         
         return section
     }
+    
     func ingredientLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)

@@ -8,6 +8,7 @@ struct Kind: RawRepresentable, Hashable {
         self.rawValue = rawValue
     }
     
+    static let profileInfo = Kind(rawValue: Section.AppSection.profileInfo.rawValue)
     static let categories = Kind(rawValue: Section.AppSection.categories.rawValue)
     static let promotion = Kind(rawValue: Section.AppSection.promotion.rawValue)
     static let newestRecipe = Kind(rawValue: Section.AppSection.newestRecipe.rawValue)

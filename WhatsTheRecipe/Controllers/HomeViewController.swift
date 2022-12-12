@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
             let sectionKind = snapshot.sectionIdentifiers[sectionIndex].kind
             
             switch sectionKind {
+                case .profileInfo:
+                    return LayoutSectionFactory().profileInfoLayout()
                 case .categories:
                     return LayoutSectionFactory().categoryLayout()
                 case .promotion:
@@ -29,7 +31,7 @@ class HomeViewController: UIViewController {
                     return LayoutSectionFactory().newestRecipeLayout()
                 default: return nil
             }
-        }
+        }       
         return layout
     }()
     
@@ -47,11 +49,14 @@ class HomeViewController: UIViewController {
     }
 
     func registerCell() {
+        collectionView.register(ProfileInfoCell.nib, forCellWithReuseIdentifier: ProfileInfoCell.reuseIdentifier)
         collectionView.register(CategoriesCell.nib, forCellWithReuseIdentifier: CategoriesCell.reuseIdentifier)
         collectionView.register(PromotionCell.nib, forCellWithReuseIdentifier: PromotionCell.reuseIdentifier)
         collectionView.register(NewestRecipeCell.nib, forCellWithReuseIdentifier: NewestRecipeCell.reuseIdentifier)
         
         collectionView.register(HeaderCell.nib, forSupplementaryViewOfKind: HeaderCell.kind, withReuseIdentifier: HeaderCell.reuseIdentifier)
+        
+        collectionView.register(SearchBarCell.nib, forSupplementaryViewOfKind: SearchBarCell.kind, withReuseIdentifier: SearchBarCell.reuseIdentifier)
         collectionView.collectionViewLayout = collectionViewLayout
     }
  
@@ -63,6 +68,10 @@ class HomeViewController: UIViewController {
             let sectionKind = snapshot.sectionIdentifiers[indexPath.section].kind
             
             switch sectionKind {
+                case .profileInfo:
+                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileInfoCell.reuseIdentifier, for: indexPath)
+                    return cell
+                    
                 case .categories:
                   return self.configure(CategoriesCell.self, with: food, for: indexPath)
                   
@@ -86,6 +95,11 @@ class HomeViewController: UIViewController {
             let sectionkind = snapshot.sectionIdentifiers[indexPath.section].kind
             
             switch sectionkind {
+                case .profileInfo:
+                    let cell = collectionView.dequeueReusableSupplementaryView(ofKind: SearchBarCell.kind, withReuseIdentifier: SearchBarCell.reuseIdentifier, for: indexPath)
+                    
+                    return cell
+                    
                 case .categories:
                     let cell = collectionView.dequeueReusableSupplementaryView(ofKind: HeaderCell.kind, withReuseIdentifier: HeaderCell.reuseIdentifier, for: indexPath) as! HeaderCell
                     cell.setupTitle("Categories")
@@ -122,6 +136,9 @@ extension HomeViewController {
     
     func dummyData() {
         let section = [
+            Section(kind: .profileInfo, item:[
+                Food()
+                ]),
             Section(kind: .categories, item:[
                 Food(image: "icon 4"),
                 Food(image: "icon 6"),

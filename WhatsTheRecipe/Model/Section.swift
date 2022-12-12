@@ -23,5 +23,6 @@ struct Section: Hashable {
         case ingredient
         case cookingTime
         case cookDetail
+        case profileInfo
     }
 }
