@@ -13,15 +13,20 @@ class CategoriesCell: UICollectionViewCell, SelfConfiguringCell {
    static let kind = String(describing: CategoriesCell.self)
     static let nib = UINib(nibName: String(describing: CategoriesCell.self), bundle: nil)
     
+    @IBOutlet weak var imageBGView: UIView!
+    
     @IBOutlet weak var iconImage: UIImageView!
-  
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     func configure(with food: Food) {
-        iconImage.image = UIImage(named: food.image)
+        if food.image.contains("icon") {
+            iconImage.image = UIImage(named: food.image)
+        } else {
+            iconImage.image = UIImage(named: "more")
+            imageBGView.backgroundColor = .orange
+        }
     }
-    
 }

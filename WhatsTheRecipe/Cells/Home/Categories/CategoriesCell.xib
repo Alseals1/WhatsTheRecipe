@@ -49,6 +49,7 @@
             <size key="customSize" width="99" height="65"/>
             <connections>
                 <outlet property="iconImage" destination="pSU-4A-RbW" id="Bzp-Z8-EN7"/>
+                <outlet property="imageBGView" destination="jcm-J3-LxN" id="2XY-ET-pj2"/>
             </connections>
             <point key="canvasLocation" x="139.69465648854961" y="18.661971830985916"/>
         </collectionViewCell>

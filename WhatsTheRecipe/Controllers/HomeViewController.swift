@@ -140,14 +140,14 @@ extension HomeViewController {
                 Food()
                 ]),
             Section(kind: .categories, item:[
-                Food(image: "icon 4"),
-                Food(image: "icon 6"),
-                Food(image: "icon"),
-                Food(image: "icon 1"),
-                Food(image: "icon 2"),
-                Food(image: "icon 5"),
-                Food(image: "icon 3"),
-                Food(image: "icon")
+                Food(image: "icon4"),
+                Food(image: "icon6"),
+                Food(image: "icon0"),
+                Food(image: "icon1"),
+                Food(image: "icon2"),
+                Food(image: "icon5"),
+                Food(image: "icon3"),
+                Food(image: "more")
             ]),
             Section(kind: .promotion, item: [Food()]),
             Section(kind: .newestRecipe, item: [Food(),Food(),Food(),Food(),Food(),Food(),Food(),Food()])
