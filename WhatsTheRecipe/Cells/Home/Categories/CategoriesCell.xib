@@ -20,8 +20,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcm-J3-LxN">
                         <rect key="frame" x="14" y="0.0" width="71" height="65"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="pSU-4A-RbW">
-                                <rect key="frame" x="18" y="18" width="35" height="29"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon3" translatesAutoresizingMaskIntoConstraints="NO" id="pSU-4A-RbW">
+                                <rect key="frame" x="18" y="15.666666666666668" width="35" height="33.666666666666657"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
                         </subviews>
@@ -55,7 +55,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="icon" width="35" height="29"/>
+        <image name="icon3" width="35" height="33.666667938232422"/>
         <namedColor name="orangeLT">
             <color red="1" green="0.49803921568627452" blue="0.13725490196078433" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

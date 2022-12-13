@@ -5,11 +5,14 @@ class IngredientsCell: UICollectionViewCell, SelfConfiguringCell {
     static let kind = String(describing: IngredientsCell.self)
     static let nib = UINib(nibName: String(describing: IngredientsCell.self), bundle: nil)
 
+    @IBOutlet weak var bubbleImage: UIImageView!
     @IBOutlet weak var ingredientLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     func configure(with food: Food) {
-        ingredientLbl.text = "•  \(food.recipe)"
+        ingredientLbl.text = (food.recipe)
+        
+      
     }
 }

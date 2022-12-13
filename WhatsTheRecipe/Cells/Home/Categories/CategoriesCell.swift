@@ -22,6 +22,7 @@ class CategoriesCell: UICollectionViewCell, SelfConfiguringCell {
     }
     
     func configure(with food: Food) {
+        
         if food.image.contains("icon") {
             iconImage.image = UIImage(named: food.image)
         } else {
