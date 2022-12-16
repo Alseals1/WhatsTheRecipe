@@ -23,11 +23,14 @@ class CategoriesCell: UICollectionViewCell, SelfConfiguringCell {
     
     func configure(with food: Food) {
         
-        if food.image.contains("icon") {
+        if food.image.hasPrefix("icon") {
             iconImage.image = UIImage(named: food.image)
+            imageBGView.backgroundColor = UIColor(named: "orangeLT")
         } else {
             iconImage.image = UIImage(named: "more")
             imageBGView.backgroundColor = .orange
+            imageBGView.layer.borderWidth = 0
+            imageBGView.layer.borderColor = UIColor.clear.cgColor
         }
     }
 }

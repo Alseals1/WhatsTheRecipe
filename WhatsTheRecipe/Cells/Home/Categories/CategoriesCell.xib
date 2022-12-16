@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcm-J3-LxN">
-                        <rect key="frame" x="14" y="0.0" width="71" height="65"/>
+                        <rect key="frame" x="10" y="0.0" width="79" height="65"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon3" translatesAutoresizingMaskIntoConstraints="NO" id="pSU-4A-RbW">
-                                <rect key="frame" x="18" y="15.666666666666668" width="35" height="33.666666666666657"/>
+                                <rect key="frame" x="22" y="15.666666666666668" width="35" height="33.666666666666657"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
                         </subviews>
@@ -29,7 +29,6 @@
                         <constraints>
                             <constraint firstItem="pSU-4A-RbW" firstAttribute="centerX" secondItem="jcm-J3-LxN" secondAttribute="centerX" id="23F-zR-e7h"/>
                             <constraint firstItem="pSU-4A-RbW" firstAttribute="centerY" secondItem="jcm-J3-LxN" secondAttribute="centerY" id="Ps3-eA-h32"/>
-                            <constraint firstAttribute="height" constant="65" id="kdx-ws-g0p"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="conerRaduis">
@@ -42,9 +41,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="jcm-J3-LxN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DD9-zM-DdM"/>
-                <constraint firstAttribute="trailing" secondItem="jcm-J3-LxN" secondAttribute="trailing" constant="14" id="Rfq-El-e74"/>
+                <constraint firstAttribute="trailing" secondItem="jcm-J3-LxN" secondAttribute="trailing" constant="10" id="Rfq-El-e74"/>
                 <constraint firstAttribute="bottom" secondItem="jcm-J3-LxN" secondAttribute="bottom" id="iaq-7R-CB9"/>
-                <constraint firstItem="jcm-J3-LxN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="14" id="vxK-ph-rWd"/>
+                <constraint firstItem="jcm-J3-LxN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="vxK-ph-rWd"/>
             </constraints>
             <size key="customSize" width="99" height="65"/>
             <connections>

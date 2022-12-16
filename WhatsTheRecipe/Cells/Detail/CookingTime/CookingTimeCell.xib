@@ -50,7 +50,7 @@
                                     <constraint firstItem="6ws-th-yCy" firstAttribute="top" secondItem="7cb-m9-3AF" secondAttribute="top" id="xp3-OC-2Qo"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zz8-Sr-eXH" userLabel="DifficulityView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zz8-Sr-eXH" userLabel="ServesView">
                                 <rect key="frame" x="156.33333333333334" y="0.0" width="75.333333333333343" height="85"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serves" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzp-CG-2As">
@@ -60,9 +60,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Person" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPf-rK-7MY">
-                                        <rect key="frame" x="0.0" y="25" width="75.333333333333329" height="22"/>
+                                        <rect key="frame" x="0.0" y="25" width="75.333333333333329" height="21.666666666666671"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="n3F-ul-cQ6"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21.670000000000002" id="8sj-6S-hKp"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -73,14 +73,14 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75.329999999999998" id="4Yd-MX-ysr"/>
                                     <constraint firstItem="BPf-rK-7MY" firstAttribute="top" secondItem="jzp-CG-2As" secondAttribute="bottom" constant="8" id="MgU-eo-2lz"/>
-                                    <constraint firstAttribute="trailing" secondItem="BPf-rK-7MY" secondAttribute="trailing" id="bdk-s2-k87"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BPf-rK-7MY" secondAttribute="trailing" id="bdk-s2-k87"/>
                                     <constraint firstAttribute="trailing" secondItem="jzp-CG-2As" secondAttribute="trailing" id="oOW-Lg-A5b"/>
-                                    <constraint firstItem="BPf-rK-7MY" firstAttribute="leading" secondItem="Zz8-Sr-eXH" secondAttribute="leading" id="vu6-42-iPe"/>
+                                    <constraint firstItem="BPf-rK-7MY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zz8-Sr-eXH" secondAttribute="leading" id="vu6-42-iPe"/>
                                     <constraint firstItem="jzp-CG-2As" firstAttribute="top" secondItem="Zz8-Sr-eXH" secondAttribute="top" id="xUO-XS-2aI"/>
                                     <constraint firstItem="jzp-CG-2As" firstAttribute="leading" secondItem="Zz8-Sr-eXH" secondAttribute="leading" id="yI1-oh-tzN"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOc-do-Vmt" userLabel="ServesView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOc-do-Vmt" userLabel="DifficulityView">
                                 <rect key="frame" x="271.66666666666669" y="0.0" width="62.333333333333314" height="85"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCj-Zn-CD8">
@@ -134,7 +134,7 @@
                 <constraint firstAttribute="bottom" secondItem="nnP-6t-YcK" secondAttribute="bottom" id="luI-1k-74k"/>
             </constraints>
             <size key="customSize" width="365" height="108"/>
-            <point key="canvasLocation" x="-124.42748091603053" y="-19.718309859154932"/>
+            <point key="canvasLocation" x="-124.42748091603053" y="-20.070422535211268"/>
         </collectionViewCell>
     </objects>
     <resources>

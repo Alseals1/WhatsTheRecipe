@@ -152,7 +152,7 @@ extension HomeViewController {
                 Food(title: "Spicy chicken caramel", typeOfFood: "Dinner", chefName: "Mindy Douglas", image: "detailDemoImage"),
                 Food(title: "Sweet Chook O' Sandwich", typeOfFood: "Lunch", chefName: "Santita Humphries", image: "burger"),
                 Food(title: "Steak Salad", typeOfFood: "Dinner", chefName: "Zachary Farmer", image: "salad"),
-                Food(title: "Chicken -n- Waffles", typeOfFood: "breakfast", chefName: "Craig Clayton", image: "chickwaffles")])
+                Food(title: "Chicken -n- Waffles", typeOfFood: "Breakfast", chefName: "Craig Clayton", image: "chickwaffles")])
             
         ]
         snapshot = NSDiffableDataSourceSnapshot<Section, Food>()
