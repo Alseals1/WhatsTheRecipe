@@ -50,6 +50,7 @@
 		C6B39C5F296088D500ADF20F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C6B39C5E296088D500ADF20F /* FirebaseFirestore */; };
 		C6B39C61296088D500ADF20F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C6B39C60296088D500ADF20F /* FirebaseFirestoreSwift */; };
 		C6B39C63296088D500ADF20F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C6B39C62296088D500ADF20F /* FirebaseStorage */; };
+		C6B39C6629608B6C00ADF20F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C6529608B6C00ADF20F /* AuthService.swift */; };
 		C6B4DCD029478B190046BE16 /* SearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B4DCCE29478B190046BE16 /* SearchBarCell.swift */; };
 		C6B4DCD129478B190046BE16 /* SearchBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B4DCCF29478B190046BE16 /* SearchBarCell.xib */; };
 		C6B4DCD529478DE40046BE16 /* ProfileInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B4DCD329478DE40046BE16 /* ProfileInfoCell.swift */; };
@@ -95,6 +96,7 @@
 		C6B39C4E295FEB2F00ADF20F /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		C6B39C512960806A00ADF20F /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		C6B39C53296086FC00ADF20F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C6B39C6529608B6C00ADF20F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C6B4DCCE29478B190046BE16 /* SearchBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCell.swift; sourceTree = "<group>"; };
 		C6B4DCCF29478B190046BE16 /* SearchBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarCell.xib; sourceTree = "<group>"; };
 		C6B4DCD329478DE40046BE16 /* ProfileInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoCell.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 		C606E8842938F26B00B7227A /* WhatsTheRecipe */ = {
 			isa = PBXGroup;
 			children = (
+				C6B39C6429608B4D00ADF20F /* AuthService */,
 				C6B39C35295F305400ADF20F /* ViewModel */,
 				C606E89C2938F29300B7227A /* App */,
 				C606E89B2938F28900B7227A /* Utils */,
@@ -349,6 +352,14 @@
 			path = AlertManager;
 			sourceTree = "<group>";
 		};
+		C6B39C6429608B4D00ADF20F /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				C6B39C6529608B6C00ADF20F /* AuthService.swift */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
 		C6B4DCCD29478B000046BE16 /* SearchBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,6 +492,7 @@
 				C606E8882938F26B00B7227A /* SceneDelegate.swift in Sources */,
 				C6B39C522960806A00ADF20F /* AlertManager.swift in Sources */,
 				C672DDD5293A7703008E16AE /* RecipeViewController.swift in Sources */,
+				C6B39C6629608B6C00ADF20F /* AuthService.swift in Sources */,
 				C640CBD0293A475A00F3825C /* PromotionCell.swift in Sources */,
 				C6B39C44295F366A00ADF20F /* RegisterController.swift in Sources */,
 				C606E8A02938F4A300B7227A /* Extention+UIView.swift in Sources */,

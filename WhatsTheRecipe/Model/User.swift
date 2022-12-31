@@ -1,8 +1,9 @@
 import Foundation
 
-struct User: Identifiable, Codable {
-    var id = UUID()
+struct User: Codable {
     
+    var firstname: String
+    var lastname: String
     var email: String
-    
+    var password: String
 }
