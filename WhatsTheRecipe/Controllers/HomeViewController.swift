@@ -41,6 +41,8 @@ class HomeViewController: UIViewController {
     }
     
     func initialize() {
+        navigationItem.hidesBackButton = true
+        
         setupDataSource()
         setupHeader()
         registerCell()
