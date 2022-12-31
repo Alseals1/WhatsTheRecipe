@@ -39,6 +39,8 @@
 		C6B39C42295F365400ADF20F /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C41295F365400ADF20F /* SignInController.swift */; };
 		C6B39C44295F366A00ADF20F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C43295F366A00ADF20F /* RegisterController.swift */; };
 		C6B39C46295F3FBD00ADF20F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C45295F3FBD00ADF20F /* User.swift */; };
+		C6B39C4C295FE08800ADF20F /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C4B295FE08800ADF20F /* WebViewerController.swift */; };
+		C6B39C4F295FEB2F00ADF20F /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C4E295FEB2F00ADF20F /* ForgotPasswordController.swift */; };
 		C6B4DCD029478B190046BE16 /* SearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B4DCCE29478B190046BE16 /* SearchBarCell.swift */; };
 		C6B4DCD129478B190046BE16 /* SearchBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B4DCCF29478B190046BE16 /* SearchBarCell.xib */; };
 		C6B4DCD529478DE40046BE16 /* ProfileInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B4DCD329478DE40046BE16 /* ProfileInfoCell.swift */; };
@@ -80,6 +82,8 @@
 		C6B39C41295F365400ADF20F /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		C6B39C43295F366A00ADF20F /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		C6B39C45295F3FBD00ADF20F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C6B39C4B295FE08800ADF20F /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
+		C6B39C4E295FEB2F00ADF20F /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		C6B4DCCE29478B190046BE16 /* SearchBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCell.swift; sourceTree = "<group>"; };
 		C6B4DCCF29478B190046BE16 /* SearchBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarCell.xib; sourceTree = "<group>"; };
 		C6B4DCD329478DE40046BE16 /* ProfileInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoCell.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		C606E8992938F27C00B7227A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C6B39C4A295FE06300ADF20F /* WebViewer */,
 				C606E89E2938F2C300B7227A /* Storyboards */,
 			);
 			path = View;
@@ -169,10 +174,9 @@
 		C606E89D2938F2B300B7227A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C6B39C4D295FEB0D00ADF20F /* AuthControllers */,
 				C606E8892938F26B00B7227A /* HomeViewController.swift */,
 				C672DDD4293A7703008E16AE /* RecipeViewController.swift */,
-				C6B39C41295F365400ADF20F /* SignInController.swift */,
-				C6B39C43295F366A00ADF20F /* RegisterController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -299,6 +303,24 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C6B39C4A295FE06300ADF20F /* WebViewer */ = {
+			isa = PBXGroup;
+			children = (
+				C6B39C4B295FE08800ADF20F /* WebViewerController.swift */,
+			);
+			path = WebViewer;
+			sourceTree = "<group>";
+		};
+		C6B39C4D295FEB0D00ADF20F /* AuthControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6B39C41295F365400ADF20F /* SignInController.swift */,
+				C6B39C43295F366A00ADF20F /* RegisterController.swift */,
+				C6B39C4E295FEB2F00ADF20F /* ForgotPasswordController.swift */,
+			);
+			path = AuthControllers;
+			sourceTree = "<group>";
+		};
 		C6B4DCCD29478B000046BE16 /* SearchBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6B39C37295F307B00ADF20F /* HomeViewModel.swift in Sources */,
+				C6B39C4F295FEB2F00ADF20F /* ForgotPasswordController.swift in Sources */,
 				C640CBC52939135100F3825C /* CategoriesCell.swift in Sources */,
 				C606E88A2938F26B00B7227A /* HomeViewController.swift in Sources */,
 				C640CBD5293A4D7C00F3825C /* NewestRecipeCell.swift in Sources */,
@@ -421,6 +444,7 @@
 				C606E8A02938F4A300B7227A /* Extention+UIView.swift in Sources */,
 				C640CBBC29390E1200F3825C /* Kind.swift in Sources */,
 				C6B4DCD529478DE40046BE16 /* ProfileInfoCell.swift in Sources */,
+				C6B39C4C295FE08800ADF20F /* WebViewerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

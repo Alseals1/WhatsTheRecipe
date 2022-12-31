@@ -17,6 +17,9 @@ class SignInController: UIViewController {
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(viewController, animated: true)
+        
+        
+        
     }
     
     @IBAction func newUserBtnPressed(_ sender: UIButton) {
@@ -30,5 +33,12 @@ class SignInController: UIViewController {
     
 
     @IBAction func forgotPasswordBtnPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "AuthStoryboard", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "ForgotPasswordController")
+        
+        viewController.modalTransitionStyle = .crossDissolve
+        viewController.modalPresentationStyle = .fullScreen
+        navigationController?.pushViewController(viewController, animated: true)
+        
     }
 }

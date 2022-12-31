@@ -1,11 +1,19 @@
+//
+//  ForgotPasswordController.swift
+//  WhatsTheRecipe
+//
+//  Created by Alandis Seals on 12/30/22.
+//
+
 import UIKit
 
-class RegisterController: UIViewController {
+class ForgotPasswordController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    
+        
     }
     
 
