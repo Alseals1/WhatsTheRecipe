@@ -10,6 +10,10 @@ class SignInController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        AlertManager.showValidEmailAlert(on: self)
+    }
+    
     @IBAction func signInBtnPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
