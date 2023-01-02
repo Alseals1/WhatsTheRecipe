@@ -21,12 +21,14 @@ extension AlertManager {
     public static func showValidPasswordAlert(on vc: UIViewController) {
        showBasicAlert(on: vc, with: "Invalid Password", and: "Please Enter A Valid Password")
     }
+    
+    
+    
 }
 
 extension AlertManager {
     
-    public static func showRegistrationErrorAlert(on vc: UIViewController, with error: Error) {
-       showBasicAlert(on: vc, with: "Unknown Registation Error", and: nil)
-        showBasicAlert(on: vc, with: "Unknown Registation Error", and: "\(error.localizedDescription)")
+    public static func showRegistrationErrorAlert(on vc: UIViewController, message: String) {
+        showBasicAlert(on: vc, with: message, and: nil)
     }
 }

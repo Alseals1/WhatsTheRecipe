@@ -376,6 +376,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="signInBtnPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Erv-1Y-Hyh"/>
+                                            <action selector="signInBtnTapped:" destination="H9c-bV-vhz" eventType="touchUpInside" id="Gvi-hn-UcP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="un8-fJ-LPP">
@@ -415,6 +416,12 @@
                             <constraint firstItem="5PV-wg-88I" firstAttribute="top" secondItem="uiH-Sp-fFz" secondAttribute="bottom" constant="10" id="oky-Gj-avo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="CcB-9C-CbX" id="fM5-pj-qz7"/>
+                        <outlet property="firstnameTextField" destination="Wtb-fJ-Wci" id="gjM-cV-3Qb"/>
+                        <outlet property="lastnameTextField" destination="m41-9C-Cib" id="ZSl-x1-rIF"/>
+                        <outlet property="passwordTextField" destination="ik3-c6-OKZ" id="TH8-Pk-dZv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HS-c9-SEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -423,7 +430,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Poe-BL-Hge">
             <objects>
-                <navigationController storyboardIdentifier="AuthStoryboard" automaticallyAdjustsScrollViewInsets="NO" id="BQf-vu-lFA" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AuthStoryboard" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BQf-vu-lFA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mIO-7Z-TZZ">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>

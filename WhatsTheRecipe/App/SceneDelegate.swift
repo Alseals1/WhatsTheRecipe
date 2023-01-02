@@ -13,18 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-      
+        
         guard let _ = (scene as? UIWindowScene) else { return }
-        
-        let userReq = User(firstname: "Aria", lastname: "James", email: "1@2.com", password: "123456")
-        
-        AuthService.shared.registerUser(with: userReq) { wasRegistered, error in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            print("You good Brother 😇")
-        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
