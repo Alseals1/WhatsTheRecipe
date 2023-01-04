@@ -34,6 +34,8 @@
 		C66D662F294257E2008AD1C7 /* IngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66D662D294257E2008AD1C7 /* IngredientsCell.xib */; };
 		C672DDD3293A76CB008E16AE /* RecipeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C672DDD2293A76CB008E16AE /* RecipeStoryboard.storyboard */; };
 		C672DDD5293A7703008E16AE /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672DDD4293A7703008E16AE /* RecipeViewController.swift */; };
+		C67EA67E2964987000C55215 /* MealCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67EA67D2964987000C55215 /* MealCategory.swift */; };
+		C67EA6812964995600C55215 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67EA6802964995600C55215 /* ApiService.swift */; };
 		C6B39C37295F307B00ADF20F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C36295F307B00ADF20F /* HomeViewModel.swift */; };
 		C6B39C3E295F35F500ADF20F /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B39C3D295F35F500ADF20F /* AuthStoryboard.storyboard */; };
 		C6B39C42295F365400ADF20F /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C41295F365400ADF20F /* SignInController.swift */; };
@@ -50,7 +52,6 @@
 		C6B39C5F296088D500ADF20F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C6B39C5E296088D500ADF20F /* FirebaseFirestore */; };
 		C6B39C61296088D500ADF20F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C6B39C60296088D500ADF20F /* FirebaseFirestoreSwift */; };
 		C6B39C63296088D500ADF20F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C6B39C62296088D500ADF20F /* FirebaseStorage */; };
-		C6B39C6629608B6C00ADF20F /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C6529608B6C00ADF20F /* AuthService.swift */; };
 		C6B39C6929609A1700ADF20F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C6829609A1700ADF20F /* AuthViewModel.swift */; };
 		C6B4DCD029478B190046BE16 /* SearchBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B4DCCE29478B190046BE16 /* SearchBarCell.swift */; };
 		C6B4DCD129478B190046BE16 /* SearchBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B4DCCF29478B190046BE16 /* SearchBarCell.xib */; };
@@ -88,6 +89,8 @@
 		C66D662D294257E2008AD1C7 /* IngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsCell.xib; sourceTree = "<group>"; };
 		C672DDD2293A76CB008E16AE /* RecipeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeStoryboard.storyboard; sourceTree = "<group>"; };
 		C672DDD4293A7703008E16AE /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		C67EA67D2964987000C55215 /* MealCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealCategory.swift; sourceTree = "<group>"; };
+		C67EA6802964995600C55215 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		C6B39C36295F307B00ADF20F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		C6B39C3D295F35F500ADF20F /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
 		C6B39C41295F365400ADF20F /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
@@ -97,7 +100,6 @@
 		C6B39C4E295FEB2F00ADF20F /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		C6B39C512960806A00ADF20F /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		C6B39C53296086FC00ADF20F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C6B39C6529608B6C00ADF20F /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		C6B39C6829609A1700ADF20F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		C6B4DCCE29478B190046BE16 /* SearchBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarCell.swift; sourceTree = "<group>"; };
 		C6B4DCCF29478B190046BE16 /* SearchBarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarCell.xib; sourceTree = "<group>"; };
@@ -142,7 +144,7 @@
 		C606E8842938F26B00B7227A /* WhatsTheRecipe */ = {
 			isa = PBXGroup;
 			children = (
-				C6B39C6429608B4D00ADF20F /* AuthService */,
+				C67EA67F2964994400C55215 /* API */,
 				C6B39C35295F305400ADF20F /* ViewModel */,
 				C606E89C2938F29300B7227A /* App */,
 				C606E89B2938F28900B7227A /* Utils */,
@@ -173,6 +175,7 @@
 				C640CBBB29390E1200F3825C /* Kind.swift */,
 				C640CBBD29390E4C00F3825C /* Section.swift */,
 				C6B39C45295F3FBD00ADF20F /* User.swift */,
+				C67EA67D2964987000C55215 /* MealCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,6 +323,14 @@
 			path = Ingredients;
 			sourceTree = "<group>";
 		};
+		C67EA67F2964994400C55215 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				C67EA6802964995600C55215 /* ApiService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		C6B39C35295F305400ADF20F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,14 +364,6 @@
 				C6B39C512960806A00ADF20F /* AlertManager.swift */,
 			);
 			path = AlertManager;
-			sourceTree = "<group>";
-		};
-		C6B39C6429608B4D00ADF20F /* AuthService */ = {
-			isa = PBXGroup;
-			children = (
-				C6B39C6529608B6C00ADF20F /* AuthService.swift */,
-			);
-			path = AuthService;
 			sourceTree = "<group>";
 		};
 		C6B4DCCD29478B000046BE16 /* SearchBar */ = {
@@ -481,6 +484,7 @@
 				C640CBC52939135100F3825C /* CategoriesCell.swift in Sources */,
 				C606E88A2938F26B00B7227A /* HomeViewController.swift in Sources */,
 				C640CBD5293A4D7C00F3825C /* NewestRecipeCell.swift in Sources */,
+				C67EA67E2964987000C55215 /* MealCategory.swift in Sources */,
 				C606E8862938F26B00B7227A /* AppDelegate.swift in Sources */,
 				C640CBBA29390D2700F3825C /* Food.swift in Sources */,
 				C66D6624294236C4008AD1C7 /* HeaderDetailCell.swift in Sources */,
@@ -496,12 +500,12 @@
 				C6B39C6929609A1700ADF20F /* AuthViewModel.swift in Sources */,
 				C6B39C522960806A00ADF20F /* AlertManager.swift in Sources */,
 				C672DDD5293A7703008E16AE /* RecipeViewController.swift in Sources */,
-				C6B39C6629608B6C00ADF20F /* AuthService.swift in Sources */,
 				C640CBD0293A475A00F3825C /* PromotionCell.swift in Sources */,
 				C6B39C44295F366A00ADF20F /* RegisterController.swift in Sources */,
 				C606E8A02938F4A300B7227A /* Extention+UIView.swift in Sources */,
 				C640CBBC29390E1200F3825C /* Kind.swift in Sources */,
 				C6B4DCD529478DE40046BE16 /* ProfileInfoCell.swift in Sources */,
+				C67EA6812964995600C55215 /* ApiService.swift in Sources */,
 				C6B39C4C295FE08800ADF20F /* WebViewerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

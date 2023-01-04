@@ -1,4 +1,5 @@
 import UIKit
+import FirebaseAuth
 
 protocol SelfConfiguringCell {
     static var reuseIdentifier: String { get }
@@ -11,6 +12,7 @@ class HomeViewController: UIViewController {
     private var dataSource: UICollectionViewDiffableDataSource<Section, Food>!
     private var snapshot = NSDiffableDataSourceSnapshot<Section, Food>()
     private var section = [Section]()
+    private var categories = [Category]()
     
     lazy var collectionViewLayout: UICollectionViewLayout = {
         let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, env) -> NSCollectionLayoutSection? in
@@ -37,12 +39,13 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         modalPresentationStyle = .fullScreen
+       
         initialize()
     }
     
     func initialize() {
         navigationItem.hidesBackButton = true
-        
+        configureItem()
         setupDataSource()
         setupHeader()
         registerCell()
@@ -114,7 +117,6 @@ extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "RecipeStoryboard", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "RecipeViewController")
-        
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(viewController, animated: true)
@@ -161,6 +163,31 @@ extension HomeViewController {
         snapshot.appendSections(section)
         section.forEach { snapshot.appendItems($0.item, toSection: $0) }
         dataSource.apply(snapshot, animatingDifferences: false)
+    }
+    
+    func configureItem() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(handleSignOut))
+    }
+    
+    @objc func handleSignOut() {
+        let alertController = UIAlertController(title: nil, message: "Are you sure you want to sign out", preferredStyle: .actionSheet)
+        
+        alertController.addAction(UIAlertAction(title: "Sign Out", style: .destructive, handler: { _ in
+            self.didTapSignOut()
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alertController, animated: true)
+    }
+    
+    
+     func didTapSignOut() {
+        let firebaseAuth = Auth.auth()
+        do {
+            print("Signing out")
+           try? firebaseAuth.signOut()
+            
+           
+        }
     }
 }
 

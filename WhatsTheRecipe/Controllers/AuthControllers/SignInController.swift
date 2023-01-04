@@ -2,28 +2,20 @@ import UIKit
 import FirebaseAuth
 
 class SignInController: UIViewController {
+    
     @IBOutlet weak var signinTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-        // Do any additional setup after loading the view.
     }
-    
     
     @IBAction func signInBtnPressed(_ sender: UIButton) {
         let email = signinTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        
-        
         checkAuth(email: email, password: password)
-        
-        
     }
     
     @IBAction func newUserBtnPressed(_ sender: UIButton) {
@@ -34,7 +26,6 @@ class SignInController: UIViewController {
         viewController.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(viewController, animated: true)
     }
-    
 
     @IBAction func forgotPasswordBtnPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "AuthStoryboard", bundle: nil)
@@ -58,7 +49,6 @@ extension SignInController {
         return nil
     }
     
-    
     func checkAuth(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
             
@@ -72,6 +62,7 @@ extension SignInController {
                 viewController.modalTransitionStyle = .crossDissolve
                 viewController.modalPresentationStyle = .fullScreen
                 self.navigationController?.pushViewController(viewController, animated: true)
+                
             }
         }
     }

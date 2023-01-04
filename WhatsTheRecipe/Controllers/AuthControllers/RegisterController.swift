@@ -10,7 +10,6 @@ class RegisterController: UIViewController {
     
     let db = Firestore.firestore()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,13 +17,10 @@ class RegisterController: UIViewController {
     }
     
     @IBAction func signInBtnTapped(_ sender: UIButton) {
-        
         let error = validateFields()
-        
         if error != nil {
             AlertManager.showRegistrationErrorAlert(on: self, message: "All fields need to be fill")
         }else {
-            
             let firstname = firstnameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastname = lastnameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -58,7 +54,6 @@ class RegisterController: UIViewController {
         self.present(nav, animated: true)
         
     }
-
 }
 
 extension RegisterController {
@@ -66,7 +61,6 @@ extension RegisterController {
     func transitionToHome() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
-        
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(viewController, animated: true)
