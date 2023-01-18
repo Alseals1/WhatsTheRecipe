@@ -15,22 +15,27 @@ class CategoriesCell: UICollectionViewCell, SelfConfiguringCell {
     
     @IBOutlet weak var imageBGView: UIView!
     @IBOutlet weak var iconImage: UIImageView!
-
+    @IBOutlet weak var moreLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
-    func configure(with food: Food) {
-        
-        if food.image.hasPrefix("icon") {
-            iconImage.image = UIImage(named: food.image)
+    func configure(with recipe: Recipe) {
+    
+        if recipe.image.hasPrefix("icon") {
+            iconImage.image = UIImage(named: recipe.image)
             imageBGView.backgroundColor = UIColor(named: "orangeLT")
+            moreLbl.text = ""
         } else {
-            iconImage.image = UIImage(named: "more")
+            iconImage.image = nil
+            moreLbl.text = "More"
+            moreLbl.textColor = .white
             imageBGView.backgroundColor = .orange
             imageBGView.layer.borderWidth = 0
             imageBGView.layer.borderColor = UIColor.clear.cgColor
         }
+         
     }
 }

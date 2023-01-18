@@ -1,28 +1,9 @@
 import Foundation
 
-
-struct Section: Hashable {
-    let id = UUID()
+struct Section: Hashable, Codable {
+    let id: Int
     
     let title: String
-    let subtitle: String
-    let kind: Kind
-    let item: [Food]
-    
-    init(title: String = "", subtitle: String = "", kind: Kind, item: [Food]) {
-        self.title = title
-        self.subtitle = subtitle
-        self.kind = kind
-        self.item = item
-    }
-    
-    enum AppSection: String {
-        case categories
-        case promotion
-        case newestRecipe
-        case ingredient
-        case cookingTime
-        case cookDetail
-        case profileInfo
-    }
+    let kind: String
+    let recipes: [Recipe]
 }

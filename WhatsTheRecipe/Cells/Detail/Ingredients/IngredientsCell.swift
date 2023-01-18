@@ -10,8 +10,8 @@ class IngredientsCell: UICollectionViewCell, SelfConfiguringCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    func configure(with food: Food) {
-        ingredientLbl.text = (food.recipe)
+    func configure(with recipe: Recipe) {
+       // ingredientLbl.text = (food.recipe)
         
       
     }

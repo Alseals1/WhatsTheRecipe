@@ -1,6 +1,6 @@
 import UIKit
 
-class RecipeViewController: UIViewController {
+/*class RecipeViewController: UIViewController {
     private var datasource: UICollectionViewDiffableDataSource<Section, Food>!
     private var snapshot = NSDiffableDataSourceSnapshot<Section, Food>()
     
@@ -14,11 +14,11 @@ class RecipeViewController: UIViewController {
             let sectionKind = snapshot.sectionIdentifiers[sectionIndex].kind
             
             switch sectionKind {
-                case .cookDetail:
+                case "cookDetail":
                     return LayoutSectionFactory().cookDetailLayout()
-                case .cookingTime:
+                case "cookingTime":
                     return LayoutSectionFactory().cookTimeLayout()
-                case .ingredient:
+                case "ingredient":
                     return LayoutSectionFactory().ingredientLayout()
                     
                 default: return nil
@@ -37,7 +37,7 @@ class RecipeViewController: UIViewController {
         registerCell()
         setupData()
         setupHeader()
-        dummyData()
+       // dummyData()
     }
     
     private func registerCell() {
@@ -57,15 +57,15 @@ class RecipeViewController: UIViewController {
             let sectionKind = snapshot.sectionIdentifiers[indexPath.section].kind
             
             switch sectionKind {
-                case .cookDetail:
+                case "cookDetail":
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeaderDetailCell.reuseIdentifier, for: indexPath)
                     return cell
                     
-                case .cookingTime:
+                case "cookingTime":
                     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CookingTimeCell.reuseIdentifier, for: indexPath)
                     return cell
                     
-                case .ingredient:
+                case "ingredient":
                     return self.configure(IngredientsCell.self, with: food, for: indexPath)
                     
                 default: return nil
@@ -81,7 +81,7 @@ class RecipeViewController: UIViewController {
             let sectionkind = snapshot.sectionIdentifiers[indexPath.section].kind
             
             switch sectionkind {
-                case .ingredient:
+                case "ingredient":
                     let cell = collectionView.dequeueReusableSupplementaryView(ofKind: HeaderCell.kind, withReuseIdentifier: HeaderCell.reuseIdentifier, for: indexPath) as! HeaderCell
                     cell.setupTitle("Ingredients")
                     return cell
@@ -101,11 +101,11 @@ extension RecipeViewController {
          return cell
      }
     
-    func dummyData() {
-        let section = [
-            Section(kind: .cookDetail, item: [Food()]),
-            Section(kind: .cookingTime, item: [Food()]),
-            Section(kind: .ingredient, item: [
+    /* func dummyData() {
+       /* let section = [
+            Section(kind: "cookDetail", item: [Food()]),
+            Section(kind: "cookingTime", item: [Food()]),
+            Section(kind: "ingredient", item: [
                 Food(recipe: "2 tsp Dijon mustard"),
                 Food(recipe: "1 tbsp capers"),
                 Food(recipe: "1 clove garlic"),
@@ -115,10 +115,11 @@ extension RecipeViewController {
                 Food(recipe: "2 cup marinade"),
                 Food(recipe: "2 tsp Butter")
             ])
-        ]
+        ]*/
         snapshot = NSDiffableDataSourceSnapshot<Section, Food>()
         snapshot.appendSections(section)
         section.forEach { snapshot.appendItems($0.item, toSection: $0) }
         datasource.apply(snapshot, animatingDifferences: false)
     }
-}
+     */
+}*/
