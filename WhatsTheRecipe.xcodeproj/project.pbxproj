@@ -75,6 +75,7 @@
 		C66D662F294257E2008AD1C7 /* IngredientsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C66D662D294257E2008AD1C7 /* IngredientsCell.xib */; };
 		C672DDD3293A76CB008E16AE /* RecipeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C672DDD2293A76CB008E16AE /* RecipeStoryboard.storyboard */; };
 		C672DDD5293A7703008E16AE /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C672DDD4293A7703008E16AE /* RecipeViewController.swift */; };
+		C69954FE2980BED800AFD68F /* foodData.json in Resources */ = {isa = PBXBuildFile; fileRef = C69954FD2980BED800AFD68F /* foodData.json */; };
 		C6B39C3E295F35F500ADF20F /* AuthStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B39C3D295F35F500ADF20F /* AuthStoryboard.storyboard */; };
 		C6B39C42295F365400ADF20F /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C41295F365400ADF20F /* SignInController.swift */; };
 		C6B39C44295F366A00ADF20F /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B39C43295F366A00ADF20F /* RegisterController.swift */; };
@@ -96,7 +97,6 @@
 		C6B4DCD629478DE40046BE16 /* ProfileInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6B4DCD429478DE40046BE16 /* ProfileInfoCell.xib */; };
 		C6FB48EE2970760500A5BB06 /* Extension+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FB48ED2970760500A5BB06 /* Extension+Bundle.swift */; };
 		C6FB48F02970824C00A5BB06 /* SelfConfiguringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FB48EF2970824C00A5BB06 /* SelfConfiguringCell.swift */; };
-		C6FD5A0E296C8ACC00368EBA /* foodData.json in Resources */ = {isa = PBXBuildFile; fileRef = C6FD5A0D296C8ACC00368EBA /* foodData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,6 +170,7 @@
 		C66D662D294257E2008AD1C7 /* IngredientsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsCell.xib; sourceTree = "<group>"; };
 		C672DDD2293A76CB008E16AE /* RecipeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipeStoryboard.storyboard; sourceTree = "<group>"; };
 		C672DDD4293A7703008E16AE /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		C69954FD2980BED800AFD68F /* foodData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foodData.json; sourceTree = "<group>"; };
 		C6B39C3D295F35F500ADF20F /* AuthStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AuthStoryboard.storyboard; sourceTree = "<group>"; };
 		C6B39C41295F365400ADF20F /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		C6B39C43295F366A00ADF20F /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
@@ -184,7 +185,6 @@
 		C6B4DCD429478DE40046BE16 /* ProfileInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileInfoCell.xib; sourceTree = "<group>"; };
 		C6FB48ED2970760500A5BB06 /* Extension+Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Bundle.swift"; sourceTree = "<group>"; };
 		C6FB48EF2970824C00A5BB06 /* SelfConfiguringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguringCell.swift; sourceTree = "<group>"; };
-		C6FD5A0D296C8ACC00368EBA /* foodData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = foodData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,7 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				C65EC604296F21D100CF7EFC /* imagesForRecipeApp */,
-				C6FD5A0D296C8ACC00368EBA /* foodData.json */,
+				C69954FD2980BED800AFD68F /* foodData.json */,
 			);
 			path = FoodData;
 			sourceTree = "<group>";
@@ -601,6 +601,7 @@
 				C6B39C54296086FC00ADF20F /* GoogleService-Info.plist in Resources */,
 				C65EC637296F21D100CF7EFC /* LPwings@2x.png in Resources */,
 				C65EC63F296F21D100CF7EFC /* ChickenWaffles.png in Resources */,
+				C69954FE2980BED800AFD68F /* foodData.json in Resources */,
 				C606E8922938F26C00B7227A /* LaunchScreen.storyboard in Resources */,
 				C65EC64E296F21D100CF7EFC /* icon5.png in Resources */,
 				C65EC64D296F21D100CF7EFC /* steak@2x.png in Resources */,
@@ -612,7 +613,6 @@
 				C65EC641296F21D100CF7EFC /* icon@2x.png in Resources */,
 				C65EC633296F21D100CF7EFC /* veganPancake@3x.png in Resources */,
 				C6B4DCD129478B190046BE16 /* SearchBarCell.xib in Resources */,
-				C6FD5A0E296C8ACC00368EBA /* foodData.json in Resources */,
 				C65EC64F296F21D100CF7EFC /* icon4.png in Resources */,
 				C65EC642296F21D100CF7EFC /* veganPancake.png in Resources */,
 				C65EC64A296F21D100CF7EFC /* icon7.png in Resources */,

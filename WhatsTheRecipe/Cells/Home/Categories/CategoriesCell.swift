@@ -23,7 +23,6 @@ class CategoriesCell: UICollectionViewCell, SelfConfiguringCell {
     }
     
     func configure(with recipe: Recipe) {
-    
         if recipe.image.hasPrefix("icon") {
             iconImage.image = UIImage(named: recipe.image)
             imageBGView.backgroundColor = UIColor(named: "orangeLT")

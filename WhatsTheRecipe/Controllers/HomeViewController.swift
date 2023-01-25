@@ -83,7 +83,6 @@ class HomeViewController: UIViewController {
         }
         setupHeader()
         
-        
         snapshot = NSDiffableDataSourceSnapshot<Section, Recipe>()
         snapshot.appendSections(section)
         section.forEach { snapshot.appendItems($0.recipes, toSection: $0) }
@@ -94,14 +93,10 @@ class HomeViewController: UIViewController {
         dataSource.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
             guard let self = self else { return UICollectionReusableView() }
             
-            //let snapshot = self.dataSource.snapshot()
-            //let sectionkind = snapshot.sectionIdentifiers[indexPath.section].kind
-            
             if kind == UICollectionView.elementKindSectionHeader {
                 let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCell.reuseIdentifier, for: indexPath) as! HeaderCell
                 header.headerTitleLbl.text = self.section[indexPath.section].title
                 return header
-                
             }  else if kind == UICollectionView.elementKindSectionFooter {
                 let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: SearchBarCell.reuseIdentifier, for: indexPath)
                 return footer

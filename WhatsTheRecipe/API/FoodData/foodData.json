@@ -1,0 +1,495 @@
+[
+  
+    {
+        "id": 0,
+        "kind": "profileInfo",
+        "title": "",
+        "recipes": [
+            {
+                "id": 1,
+                "type": "Dinner",
+                "category": "Chicken",
+                "title": "Spicy Chicken Carmel",
+                "ingredients": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "newestRecipe": true,
+                "image": "spicyChickenCarmel",
+                "chefs": [
+                    {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                    }
+                    
+                ]
+            },
+            {
+                "id": 2,
+                "type": "Dinner",
+                "category": "Chicken",
+                "title": "Spicy Chicken Carmel",
+                "ingredients": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "newestRecipe": true,
+                "image": "spicyChickenCarmel",
+                "chefs": [
+                    {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                    }
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "kind": "category",
+        "title": "Categories",
+        "recipes": [
+            {
+                "id": 11,
+                "type": "",
+                "category": "",
+                "title": "",
+                "ingredients": [],
+                "newestRecipe": true,
+                "image": "icon",
+                "chefs": [
+                    {
+                        "id": 12,
+                        "name": "Alandis Seals",
+                        "image": ""
+                    }
+                    
+                ]
+            },
+            {
+                "id": 13,
+                "type": "",
+                "category": "",
+                "title": "",
+                "ingredients": [],
+                "newestRecipe": true,
+                "image": "icon2",
+                "chefs": [
+                     {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                        
+                    }
+                ]
+            },
+            {
+                "id": 23,
+                "type": "",
+                "category": "",
+                "title": "",
+                "ingredients": [],
+                "newestRecipe": true,
+                "image": "icon3",
+                "chefs": [
+                     {
+                        "id": 22,
+                        "name": "Alandis Seals",
+                        "image": ""
+                        
+                    }
+                ]
+            },
+            {
+                "id": 34,
+                "type": "",
+                "category": "",
+                "title": "",
+                "ingredients": [],
+                "newestRecipe": true,
+                "image": "icon4",
+                "chefs": [
+                   {
+                        "id": 32,
+                        "name": "Alandis Seals",
+                        "image": ""
+                        
+                    }
+                ]
+            },
+            {
+                "id": 35,
+                "type": "",
+                "category": "",
+                "title": "",
+                "ingredients": [],
+                "newestRecipe": true,
+                "image": "icon5",
+                "chefs": [
+                     {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                        
+                    }
+                ]
+            },
+            {
+                "id": 36,
+                "type": "",
+                "category": "",
+                "title": "",
+                "ingredients": [],
+                "newestRecipe": true,
+                "image": "icon6",
+                "chefs": [
+                    {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": "icon6"
+                    }
+                ]
+            },
+            {
+                "id": 37,
+                "type": "",
+                "category": "",
+                "title": "",
+                "ingredients": [],
+                "newestRecipe": true,
+                "image": "icon7",
+                "chefs": [
+                    {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                        
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "type": "",
+                "category": "",
+                "title": "",
+                "ingredients": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "newestRecipe": true,
+                "image": "ChickenWaffles",
+                "chefs": [
+                    {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": "more"
+                        
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "kind": "promotion",
+        "title": "",
+        "recipes": [
+            {
+                "id": 100,
+                "type": "",
+                "category": "",
+                "title": "",
+                "ingredients": [],
+                "newestRecipe": true,
+                "image": "spicyChickenCarmel",
+                "chefs": [
+                    {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                    }
+                    
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "kind": "newestRecipe",
+        "title": "Newest Recipes",
+        "recipes": [
+            {
+                "id": 1,
+                "type": "Dinner",
+                "category": "Chicken",
+                "title": "Spicy Chicken Carmel",
+                "ingredients": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "newestRecipe": true,
+                "image": "spicyChickenCarmel",
+                "chefs": [
+                    {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                    }
+                    
+                ]
+            },
+            {
+                "id": 2,
+                "type": "Dinner",
+                "category": "Beef",
+                "title": "Bone-In Ribeye - 18 oz.",
+                "ingredients": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "newestRecipe": true,
+                "image": "steak.png",
+                "chefs": [
+                     {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                        
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "type": "Breakfast",
+                "category": "Sweets",
+                "title": "Vegan Pancakes",
+                "ingredients": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "newestRecipe": true,
+                "image": "veganPancake.png",
+                "chefs": [
+                     {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                        
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "type": "Dinner",
+                "category": "Soup",
+                "title": "Tasmanian Chili",
+                "ingredients": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "newestRecipe": true,
+                "image": "chili.png",
+                "chefs": [
+                   {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                        
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "type": "Lunch",
+                "category": "Chicken",
+                "title": "Lemon Pepper Wings",
+                "ingredients": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "newestRecipe": true,
+                "image": "LPwings.png",
+                "chefs": [
+                     {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                        
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "type": "Lunch",
+                "category": "Beef",
+                "title": "Sweet Chook O' Sandwich",
+                "ingredients": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "newestRecipe": true,
+                "image": "sweetChook.png",
+                "chefs": [
+                    {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "type": "Dinner",
+                "category": "Beef",
+                "title": "Steak Salad",
+                "ingredients": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "newestRecipe": true,
+                "image": "steakSalad.png",
+                "chefs": [
+                    {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                        
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "type": "Breakfast",
+                "category": "Chicken",
+                "title": "Chicken -n- Waffles",
+                "ingredients": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "newestRecipe": true,
+                "image": "ChickenWaffles",
+                "chefs": [
+                    {
+                        "id": 2,
+                        "name": "Alandis Seals",
+                        "image": ""
+                        
+                    }
+                ]
+            }
+        ]
+    }
+]
