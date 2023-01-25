@@ -1,6 +1,6 @@
 import UIKit
 
-class IngredientsCell: UICollectionViewCell, SelfConfiguringCell {
+class IngredientsCell: UICollectionViewCell {
     static let reuseIdentifier = String(describing: IngredientsCell.self)
     static let kind = String(describing: IngredientsCell.self)
     static let nib = UINib(nibName: String(describing: IngredientsCell.self), bundle: nil)
@@ -10,9 +10,8 @@ class IngredientsCell: UICollectionViewCell, SelfConfiguringCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    func configure(with recipe: Recipe) {
+    //func configure(with recipe: Recipe) {
        // ingredientLbl.text = (food.recipe)
         
-      
-    }
+    //}
 }

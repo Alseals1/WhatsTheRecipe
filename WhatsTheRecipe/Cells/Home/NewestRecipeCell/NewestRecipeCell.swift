@@ -1,6 +1,6 @@
 import UIKit
 
-class NewestRecipeCell: UICollectionViewCell, SelfConfiguringCell {
+class NewestRecipeCell: UICollectionViewCell {
     static let reuseIdentifier = String(describing: NewestRecipeCell.self)
     static let kind = String(describing: NewestRecipeCell.self)
     static let nib = UINib(nibName: String(describing: NewestRecipeCell.self), bundle: nil)
@@ -14,7 +14,7 @@ class NewestRecipeCell: UICollectionViewCell, SelfConfiguringCell {
         super.awakeFromNib()
        
     }
-    func configure(with recipe: Recipe) {
+  /*  func configure(with recipe: Recipe) {
         categoryLbl.text = recipe.category
         mealLbl.text = recipe.title
         if let chef = recipe.chefs.first {
@@ -22,5 +22,5 @@ class NewestRecipeCell: UICollectionViewCell, SelfConfiguringCell {
         }
         mealImage.image = UIImage(named: recipe.image)
         
-    }
+    } */
 }

@@ -1,12 +1,10 @@
 import Foundation
 
-struct Recipe: Hashable,Codable {
+struct Category: Hashable, Codable {
     var id: Int
     var type: String
     var category: String
     var title: String
-    var ingredients: [String]
-    var newestRecipe: Bool
     var chefs: [Chef]
     var image: String
 }

@@ -1,130 +1,118 @@
 import UIKit
 import FirebaseAuth
+import Combine
 
 class HomeViewController: UIViewController {
-    let section = Bundle.main.decode([Section].self, from: "foodData.json")
+    typealias Item = AnyHashable
+    @Published var categorySectionItem: [Item] = []
+    var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
+    var subcription = Set<AnyCancellable>()
+    
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    private var dataSource: UICollectionViewDiffableDataSource<Section, Recipe>!
-    private var snapshot = NSDiffableDataSourceSnapshot<Section, Recipe>()
-    private var categories = [Category]()
-    
     lazy var collectionViewLayout: UICollectionViewLayout = {
-        let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, env) -> NSCollectionLayoutSection? in
-            guard let self = self else { return nil }
-            
-            let snapshot = self.dataSource.snapshot()
-            let sectionKind = snapshot.sectionIdentifiers[sectionIndex].kind
-            
-            switch sectionKind {
-                case "profileInfo":
-                    return LayoutSectionFactory().profileInfoLayout()
-                case "category":
-                    return LayoutSectionFactory().categoryLayout()
-                case "promotion":
-                    return LayoutSectionFactory().promotionLayout()
-                case "newestRecipe":
-                    return LayoutSectionFactory().newestRecipeLayout()
-                default: return nil
-            }
-        }       
-        return layout
+        return UICollectionViewCompositionalLayout { [unowned self] index, env in
+            return self.sectionFor(index: index, environment: env)
+        }
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         modalPresentationStyle = .fullScreen
-       
         initialize()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
     }
     
     func initialize() {
         navigationItem.hidesBackButton = true
-        configureItem()
         registerCell()
-        setupDataSource()
-        
-       
+        bindData()
     }
-
-    func registerCell() {
-        collectionView.register(ProfileInfoCell.nib, forCellWithReuseIdentifier: ProfileInfoCell.reuseIdentifier)
-        collectionView.register(CategoriesCell.nib, forCellWithReuseIdentifier: CategoriesCell.reuseIdentifier)
-        collectionView.register(PromotionCell.nib, forCellWithReuseIdentifier: PromotionCell.reuseIdentifier)
-        collectionView.register(NewestRecipeCell.nib, forCellWithReuseIdentifier: NewestRecipeCell.reuseIdentifier)
+    
+    private func loadData() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.categorySectionItem = Bundle.main.decode([Category].self, from: "category.json")
+            dump(self.categorySectionItem )
+        }
         
+    }
+    
+    private func sectionFor(index: Int, environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
+        let section = self.dataSource.snapshot().sectionIdentifiers[index]
+        switch section {
+            case .category: return LayoutSectionFactory().categoryLayout()
+        }
+    }
+    
+    func registerCell() {
         collectionView.register(HeaderCell.nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCell.reuseIdentifier)
-        collectionView.register(SearchBarCell.nib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: SearchBarCell.reuseIdentifier)
+        collectionView.register(CategoriesCell.nib, forCellWithReuseIdentifier: CategoriesCell.reuseIdentifier)
         
         collectionView.collectionViewLayout = collectionViewLayout
-    }
- 
-    func setupDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section, Recipe>(collectionView: collectionView){ [weak self] (collectionView, indexPath, recipe) in
-            guard let self = self else { return UICollectionViewCell() }
-            
-            let snapshot = self.dataSource.snapshot()
-            let sectionKind = snapshot.sectionIdentifiers[indexPath.section].kind
-            
-            switch sectionKind {
-                case "profileInfo":
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileInfoCell.reuseIdentifier, for: indexPath)
-                    return cell
-                case "category":
-                  return self.configure(CategoriesCell.self, with: recipe, for: indexPath)
-                case "promotion":
-                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PromotionCell.reuseIdentifier, for: indexPath)
-                    return cell
-                case "newestRecipe":
-                    return self.configure(NewestRecipeCell.self, with: recipe, for: indexPath)
-                    
-                default: return nil
-            }
-        }
+        setupDataSource()
         setupHeader()
+    }
+    
+    private func setupDataSource() {
+        dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: collectionView, cellProvider: { collectionView, indexPath, item in
+            guard let section = Section(rawValue: indexPath.section) else { return nil }
+            
+            let cell = self.configureCell(for: section, item: item, collectionView: collectionView, indexPath: indexPath)
+            
+            return cell
+        })
         
-        snapshot = NSDiffableDataSourceSnapshot<Section, Recipe>()
-        snapshot.appendSections(section)
-        section.forEach { snapshot.appendItems($0.recipes, toSection: $0) }
-        dataSource.apply(snapshot, animatingDifferences: false)
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
+        snapshot.appendSections([.category])
+        snapshot.appendItems(categorySectionItem, toSection: .category)
+        dataSource.apply(snapshot)
+    }
+    
+    private func bindData() {
+        $categorySectionItem
+            .receive(on: RunLoop.main)
+            .sink { item in
+                self.applySnapshot(item: item, section: .category)
+                
+            }.store(in: &subcription)
+        
+    }
+    
+    private func applySnapshot(item: [Item], section: Section) {
+        var snapshot = dataSource.snapshot()
+        snapshot.appendItems(item, toSection: section)
+        dataSource.apply(snapshot)
+    }
+    
+    private func configureCell(for section: Section, item: Item, collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell? {
+        switch section {
+            case .category:
+                if let category = item as? Category {
+                    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoriesCell.reuseIdentifier , for: indexPath) as! CategoriesCell
+                    cell.configure(with: category)
+                    return cell
+                } else { return nil }
+        }
     }
     
     func setupHeader() {
-        dataSource.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
-            guard let self = self else { return UICollectionReusableView() }
-            
-            if kind == UICollectionView.elementKindSectionHeader {
-                let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCell.reuseIdentifier, for: indexPath) as! HeaderCell
-                header.headerTitleLbl.text = self.section[indexPath.section].title
-                return header
-            }  else if kind == UICollectionView.elementKindSectionFooter {
-                let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: SearchBarCell.reuseIdentifier, for: indexPath)
-                return footer
-            }
-            return UICollectionReusableView()
+        self.dataSource.supplementaryViewProvider = { (collectionView, kind, indexPath) in
+            let section = self.dataSource.snapshot().sectionIdentifiers[indexPath.section]
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderCell.reuseIdentifier, for: indexPath) as! HeaderCell
+            header.headerTitleLbl.text = section.sectionTitle
+            return header
         }
     }
 }
 
 extension HomeViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "RecipeStoryboard", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier: "RecipeViewController")
-        viewController.modalTransitionStyle = .crossDissolve
-        viewController.modalPresentationStyle = .fullScreen
-        navigationController?.pushViewController(viewController, animated: true)
-    }
+    
 }
 
 extension HomeViewController {
-   private func configure<T: SelfConfiguringCell>(_ cellType: T.Type, with recipe: Recipe, for indexPath: IndexPath) -> T {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath) as? T else {
-            fatalError("Unable to dequeue \(cellType)")
-        }
-        cell.configure(with: recipe)
-        return cell
-    }
-    
     func configureItem() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(handleSignOut))
     }
@@ -139,13 +127,13 @@ extension HomeViewController {
         present(alertController, animated: true)
     }
     
-     func didTapSignOut() {
+    func didTapSignOut() {
         let firebaseAuth = Auth.auth()
         do {
             print("Signing out")
-           try? firebaseAuth.signOut()
+            try? firebaseAuth.signOut()
             
-           
+            
         }
     }
 }

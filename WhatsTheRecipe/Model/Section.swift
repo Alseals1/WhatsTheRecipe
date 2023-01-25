@@ -1,9 +1,11 @@
 import Foundation
 
-struct Section: Hashable, Codable {
-    let id: Int
+enum Section: Int {
+    case category
     
-    let title: String
-    let kind: String
-    let recipes: [Recipe]
+    var sectionTitle: String? {
+        switch self {
+            case .category: return "Category"
+        }
+    }
 }

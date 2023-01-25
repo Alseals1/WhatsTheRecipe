@@ -2,5 +2,5 @@ import Foundation
 
 protocol SelfConfiguringCell {
     static var reuseIdentifier: String { get }
-    func configure(with recipe: Recipe)
+    func configure(with recipe: Category)
 }

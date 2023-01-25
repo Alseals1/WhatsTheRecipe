@@ -1,13 +1,6 @@
-//
-//  CategoriesCell.swift
-//  WhatsTheRecipe
-//
-//  Created by Alandis Seals on 12/1/22.
-//
-
 import UIKit
 
-class CategoriesCell: UICollectionViewCell, SelfConfiguringCell {
+class CategoriesCell: UICollectionViewCell {
     
     static let reuseIdentifier = String(describing: CategoriesCell.self)
     static let kind = String(describing: CategoriesCell.self)
@@ -22,9 +15,9 @@ class CategoriesCell: UICollectionViewCell, SelfConfiguringCell {
         
     }
     
-    func configure(with recipe: Recipe) {
-        if recipe.image.hasPrefix("icon") {
-            iconImage.image = UIImage(named: recipe.image)
+    func configure(with item: Category) {
+        if item.image.hasPrefix("icon") {
+            iconImage.image = UIImage(named: item.image)
             imageBGView.backgroundColor = UIColor(named: "orangeLT")
             moreLbl.text = ""
         } else {

@@ -74,8 +74,8 @@ struct LayoutSectionFactory: LayoutSection {
         group.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0)
         let section = NSCollectionLayoutSection(group: group)
         
-        let sectionHeader = craeteHeaderSection()
-         section.boundarySupplementaryItems = [sectionHeader]
+        //let sectionHeader = craeteHeaderSection()
+       //  section.boundarySupplementaryItems = [sectionHeader]
         
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 10, trailing: 0)
         return section
